@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/window_background_gray" android:layout_width="match_parent" android:layout_height="match_parent" app:srlDragRate="0.75" app:srlEnableLoadMore="true" app:srlEnablePureScrollMode="true">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <include layout="@layout/activity_wallet_empty_layout"/>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/content" android:paddingTop="@dimen/dp_12" android:paddingBottom="@dimen/dp_12" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="@dimen/dp_16" android:paddingEnd="@dimen/dp_16">
+                <ImageView android:id="@+id/ivTradeIcon" android:layout_width="@dimen/dp_56" android:layout_height="@dimen/dp_56" android:layout_marginTop="@dimen/dp_52" android:src="@mipmap/transfer_success_icon"/>
+                <TextView android:textSize="@dimen/sp_14" android:textColor="@color/text_descriptive_color" android:id="@+id/tvTradeTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12"/>
+                <TextView android:textSize="32sp" android:typeface="monospace" android:textStyle="bold" android:textColor="@color/text_primary_color" android:id="@+id/tvAmount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp"/>
+                <LinearLayout android:orientation="vertical" android:background="@drawable/cell_all_bg" android:padding="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <im.bclpbkiauv.ui.components.AppTextView android:textSize="@dimen/sp_12" android:textColor="@color/text_descriptive_color" android:layout_width="wrap_content" android:layout_height="wrap_content" app:textKey="CurrentState"/>
+                        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/text_red_color" android:gravity="right" android:id="@+id/tvTradeStatus" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="@dimen/dp_20"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12">
+                        <im.bclpbkiauv.ui.components.AppTextView android:textSize="@dimen/sp_12" android:textColor="@color/text_descriptive_color" android:layout_width="wrap_content" android:layout_height="wrap_content" app:textKey="ServiceFee"/>
+                        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/text_secondary_color" android:gravity="right" android:id="@+id/tvTradeServiceCharge" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="@dimen/dp_20"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12">
+                        <im.bclpbkiauv.ui.components.AppTextView android:textSize="@dimen/sp_12" android:textColor="@color/text_descriptive_color" android:layout_width="wrap_content" android:layout_height="wrap_content" app:textKey="RefundTime"/>
+                        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/text_secondary_color" android:gravity="right" android:id="@+id/tvTradeStartTime" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="@dimen/dp_20"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12">
+                        <im.bclpbkiauv.ui.components.AppTextView android:textSize="@dimen/sp_12" android:textColor="@color/text_descriptive_color" android:id="@+id/tvTradeEndTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" app:textKey="Balance"/>
+                        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/text_secondary_color" android:gravity="right" android:id="@+id/tvTradeEndTime" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="@dimen/dp_20"/>
+                    </LinearLayout>
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12">
+                        <im.bclpbkiauv.ui.components.AppTextView android:textSize="@dimen/sp_12" android:textColor="@color/text_descriptive_color" android:layout_width="wrap_content" android:layout_height="wrap_content" app:textKey="OrderId"/>
+                        <TextView android:textSize="@dimen/sp_12" android:textColor="@color/text_secondary_color" android:gravity="right" android:id="@+id/tvTradeId" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="@dimen/dp_20"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

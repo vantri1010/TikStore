@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <im.bclpbkiauv.ui.hviews.sliding.SlidingLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/rcy_rpk_history" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </im.bclpbkiauv.ui.hviews.sliding.SlidingLayout>
+        <TextView android:textSize="12sp" android:textColor="#ff999999" android:gravity="center" android:id="@+id/tv_rpk_back_desc" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="35dp" android:text="24小时内未被领取，红包将退回"/>
+    </LinearLayout>
+</FrameLayout>

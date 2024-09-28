@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/rl_containerView" android:background="@color/white" android:paddingTop="@dimen/dp_12" android:paddingBottom="@dimen/dp_20" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/dp_20" android:paddingEnd="@dimen/dp_20">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rv_photos" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12" android:layout_below="@+id/view_fc_text"/>
+    <include android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/rv_photos" layout="@layout/item_fc_comm_footer"/>
+    <include android:id="@+id/view_fc_header" layout="@layout/item_fc_comm_header"/>
+    <im.bclpbkiauv.ui.hui.friendscircle_v1.view.expandTextView.ExpandableTextView android:textSize="@dimen/sp_16" android:textColor="@color/color_333333" android:gravity="start" android:id="@+id/view_fc_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_12" android:layout_below="@+id/view_fc_header" app:ep_max_line="6" app:ep_need_contract="true" app:ep_need_convert_url="false" app:ep_need_expand="true" app:ep_need_self="true"/>
+</RelativeLayout>

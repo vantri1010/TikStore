@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="65dp">
+    <im.bclpbkiauv.ui.components.CheckBox2 android:id="@+id/checkBox" android:layout_width="21dp" android:layout_height="21dp"/>
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:ellipsize="end" android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13dp" android:singleLine="true"/>
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:ellipsize="end" android:id="@+id/tvSubTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="13dp" android:singleLine="true" android:layout_weight="1"/>
+    <ImageView android:id="@+id/ivArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_arrow_right" android:rotation="90"/>
+</LinearLayout>

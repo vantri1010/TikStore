@@ -1,0 +1,49 @@
+package im.bclpbkiauv.ui.cells;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.TextView;
+import im.bclpbkiauv.messenger.AndroidUtilities;
+import im.bclpbkiauv.messenger.LocaleController;
+import im.bclpbkiauv.ui.actionbar.Theme;
+import im.bclpbkiauv.ui.components.LayoutHelper;
+
+public class TextBlockCell extends FrameLayout {
+    private boolean needDivider;
+    private TextView textView;
+
+    public TextBlockCell(Context context) {
+        super(context);
+        TextView textView2 = new TextView(context);
+        this.textView = textView2;
+        textView2.setTextColor(Theme.getColor(Theme.key_windowBackgroundWhiteBlackText));
+        this.textView.setTextSize(1, 14.0f);
+        int i = 5;
+        this.textView.setGravity((LocaleController.isRTL ? 5 : 3) | 16);
+        addView(this.textView, LayoutHelper.createFrame(-1.0f, -2.0f, (!LocaleController.isRTL ? 3 : i) | 48, 23.0f, 10.0f, 23.0f, 10.0f));
+    }
+
+    public void setTextColor(int color) {
+        this.textView.setTextColor(color);
+    }
+
+    public void setText(String text, boolean divider) {
+        this.textView.setText(text);
+        this.needDivider = divider;
+        setWillNotDraw(!divider);
+    }
+
+    /* access modifiers changed from: protected */
+    public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(View.MeasureSpec.makeMeasureSpec(View.MeasureSpec.getSize(widthMeasureSpec), 1073741824), heightMeasureSpec);
+    }
+
+    /* access modifiers changed from: protected */
+    public void onDraw(Canvas canvas) {
+        if (this.needDivider) {
+            canvas.drawLine(LocaleController.isRTL ? 0.0f : (float) AndroidUtilities.dp(19.0f), (float) (getMeasuredHeight() - 1), (float) (getMeasuredWidth() - (LocaleController.isRTL ? AndroidUtilities.dp(19.0f) : 0)), (float) (getMeasuredHeight() - 1), Theme.dividerPaint);
+        }
+    }
+}

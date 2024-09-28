@@ -1,0 +1,366 @@
+package im.bclpbkiauv.ui.components;
+
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
+import android.text.Layout;
+import android.text.StaticLayout;
+import android.text.TextPaint;
+import android.view.View;
+import im.bclpbkiauv.messenger.AndroidUtilities;
+import im.bclpbkiauv.messenger.DownloadController;
+import im.bclpbkiauv.messenger.FileLoader;
+import im.bclpbkiauv.messenger.ImageLoader;
+import im.bclpbkiauv.messenger.MediaController;
+import im.bclpbkiauv.messenger.MessageObject;
+import im.bclpbkiauv.messenger.MessagesController;
+import im.bclpbkiauv.tgnet.TLRPC;
+import im.bclpbkiauv.ui.actionbar.Theme;
+import im.bclpbkiauv.ui.cells.BaseCell;
+import im.bclpbkiauv.ui.components.SeekBar;
+
+public class PopupAudioView extends BaseCell implements SeekBar.SeekBarDelegate, DownloadController.FileDownloadProgressListener {
+    private int TAG;
+    private int buttonPressed = 0;
+    private int buttonState = 0;
+    private int buttonX;
+    private int buttonY;
+    private int currentAccount;
+    protected MessageObject currentMessageObject;
+    private String lastTimeString = null;
+    private ProgressView progressView;
+    private SeekBar seekBar;
+    private int seekBarX;
+    private int seekBarY;
+    private StaticLayout timeLayout;
+    private TextPaint timePaint;
+    int timeWidth = 0;
+    private int timeX;
+    private boolean wasLayout = false;
+
+    public /* synthetic */ void onSeekBarContinuousDrag(float f) {
+        SeekBar.SeekBarDelegate.CC.$default$onSeekBarContinuousDrag(this, f);
+    }
+
+    public PopupAudioView(Context context) {
+        super(context);
+        TextPaint textPaint = new TextPaint(1);
+        this.timePaint = textPaint;
+        textPaint.setTextSize((float) AndroidUtilities.dp(16.0f));
+        this.TAG = DownloadController.getInstance(this.currentAccount).generateObserverTag();
+        SeekBar seekBar2 = new SeekBar(getContext());
+        this.seekBar = seekBar2;
+        seekBar2.setDelegate(this);
+        this.progressView = new ProgressView();
+    }
+
+    public void setMessageObject(MessageObject messageObject) {
+        if (this.currentMessageObject != messageObject) {
+            this.currentAccount = messageObject.currentAccount;
+            this.seekBar.setColors(Theme.getColor(Theme.key_chat_inAudioSeekbar), Theme.getColor(Theme.key_chat_inAudioSeekbar), Theme.getColor(Theme.key_chat_inAudioSeekbarFill), Theme.getColor(Theme.key_chat_inAudioSeekbarFill), Theme.getColor(Theme.key_chat_inAudioSeekbarSelected));
+            this.progressView.setProgressColors(-2497813, -7944712);
+            this.currentMessageObject = messageObject;
+            this.wasLayout = false;
+            requestLayout();
+        }
+        updateButtonState();
+    }
+
+    public final MessageObject getMessageObject() {
+        return this.currentMessageObject;
+    }
+
+    /* access modifiers changed from: protected */
+    public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        setMeasuredDimension(View.MeasureSpec.getSize(widthMeasureSpec), AndroidUtilities.dp(56.0f));
+    }
+
+    /* access modifiers changed from: protected */
+    public void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        if (this.currentMessageObject != null) {
+            this.seekBarX = AndroidUtilities.dp(54.0f);
+            this.buttonX = AndroidUtilities.dp(10.0f);
+            this.timeX = (getMeasuredWidth() - this.timeWidth) - AndroidUtilities.dp(16.0f);
+            this.seekBar.setSize((getMeasuredWidth() - AndroidUtilities.dp(70.0f)) - this.timeWidth, AndroidUtilities.dp(30.0f));
+            this.progressView.width = (getMeasuredWidth() - AndroidUtilities.dp(94.0f)) - this.timeWidth;
+            this.progressView.height = AndroidUtilities.dp(30.0f);
+            this.seekBarY = AndroidUtilities.dp(13.0f);
+            this.buttonY = AndroidUtilities.dp(10.0f);
+            updateProgress();
+            if (changed || !this.wasLayout) {
+                this.wasLayout = true;
+            }
+        }
+    }
+
+    /* access modifiers changed from: protected */
+    public void onDraw(Canvas canvas) {
+        if (this.currentMessageObject != null) {
+            if (!this.wasLayout) {
+                requestLayout();
+                return;
+            }
+            setDrawableBounds(Theme.chat_msgInMediaDrawable, 0, 0, getMeasuredWidth(), getMeasuredHeight());
+            Theme.chat_msgInMediaDrawable.draw(canvas);
+            if (this.currentMessageObject != null) {
+                canvas.save();
+                int i = this.buttonState;
+                if (i == 0 || i == 1) {
+                    canvas.translate((float) this.seekBarX, (float) this.seekBarY);
+                    this.seekBar.draw(canvas);
+                } else {
+                    canvas.translate((float) (this.seekBarX + AndroidUtilities.dp(12.0f)), (float) this.seekBarY);
+                    this.progressView.draw(canvas);
+                }
+                canvas.restore();
+                this.timePaint.setColor(-6182221);
+                Drawable buttonDrawable = Theme.chat_fileStatesDrawable[this.buttonState + 5][this.buttonPressed];
+                int side = AndroidUtilities.dp(36.0f);
+                setDrawableBounds(buttonDrawable, this.buttonX + ((side - buttonDrawable.getIntrinsicWidth()) / 2), this.buttonY + ((side - buttonDrawable.getIntrinsicHeight()) / 2));
+                buttonDrawable.draw(canvas);
+                canvas.save();
+                canvas.translate((float) this.timeX, (float) AndroidUtilities.dp(18.0f));
+                this.timeLayout.draw(canvas);
+                canvas.restore();
+            }
+        }
+    }
+
+    /* access modifiers changed from: protected */
+    public void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        DownloadController.getInstance(this.currentAccount).removeLoadingFileObserver(this);
+    }
+
+    /* JADX WARNING: Code restructure failed: missing block: B:34:0x00a7, code lost:
+        if (r1 <= ((float) (r3 + r4))) goto L_0x00ae;
+     */
+    /* Code decompiled incorrectly, please refer to instructions dump. */
+    public boolean onTouchEvent(android.view.MotionEvent r8) {
+        /*
+            r7 = this;
+            float r0 = r8.getX()
+            float r1 = r8.getY()
+            im.bclpbkiauv.ui.components.SeekBar r2 = r7.seekBar
+            int r3 = r8.getAction()
+            float r4 = r8.getX()
+            int r5 = r7.seekBarX
+            float r5 = (float) r5
+            float r4 = r4 - r5
+            float r5 = r8.getY()
+            int r6 = r7.seekBarY
+            float r6 = (float) r6
+            float r5 = r5 - r6
+            boolean r2 = r2.onTouch(r3, r4, r5)
+            r3 = 1
+            if (r2 == 0) goto L_0x0037
+            int r4 = r8.getAction()
+            if (r4 != 0) goto L_0x0032
+            android.view.ViewParent r4 = r7.getParent()
+            r4.requestDisallowInterceptTouchEvent(r3)
+        L_0x0032:
+            r7.invalidate()
+            goto L_0x00b4
+        L_0x0037:
+            r4 = 1108344832(0x42100000, float:36.0)
+            int r4 = im.bclpbkiauv.messenger.AndroidUtilities.dp(r4)
+            int r5 = r8.getAction()
+            if (r5 != 0) goto L_0x0064
+            int r5 = r7.buttonX
+            float r6 = (float) r5
+            int r6 = (r0 > r6 ? 1 : (r0 == r6 ? 0 : -1))
+            if (r6 < 0) goto L_0x00ae
+            int r5 = r5 + r4
+            float r5 = (float) r5
+            int r5 = (r0 > r5 ? 1 : (r0 == r5 ? 0 : -1))
+            if (r5 > 0) goto L_0x00ae
+            int r5 = r7.buttonY
+            float r6 = (float) r5
+            int r6 = (r1 > r6 ? 1 : (r1 == r6 ? 0 : -1))
+            if (r6 < 0) goto L_0x00ae
+            int r5 = r5 + r4
+            float r5 = (float) r5
+            int r5 = (r1 > r5 ? 1 : (r1 == r5 ? 0 : -1))
+            if (r5 > 0) goto L_0x00ae
+            r7.buttonPressed = r3
+            r7.invalidate()
+            r2 = 1
+            goto L_0x00ae
+        L_0x0064:
+            int r5 = r7.buttonPressed
+            if (r5 != r3) goto L_0x00ae
+            int r5 = r8.getAction()
+            r6 = 0
+            if (r5 != r3) goto L_0x007b
+            r7.buttonPressed = r6
+            r7.playSoundEffect(r6)
+            r7.didPressedButton()
+            r7.invalidate()
+            goto L_0x00ae
+        L_0x007b:
+            int r3 = r8.getAction()
+            r5 = 3
+            if (r3 != r5) goto L_0x0088
+            r7.buttonPressed = r6
+            r7.invalidate()
+            goto L_0x00ae
+        L_0x0088:
+            int r3 = r8.getAction()
+            r5 = 2
+            if (r3 != r5) goto L_0x00ae
+            int r3 = r7.buttonX
+            float r5 = (float) r3
+            int r5 = (r0 > r5 ? 1 : (r0 == r5 ? 0 : -1))
+            if (r5 < 0) goto L_0x00a9
+            int r3 = r3 + r4
+            float r3 = (float) r3
+            int r3 = (r0 > r3 ? 1 : (r0 == r3 ? 0 : -1))
+            if (r3 > 0) goto L_0x00a9
+            int r3 = r7.buttonY
+            float r5 = (float) r3
+            int r5 = (r1 > r5 ? 1 : (r1 == r5 ? 0 : -1))
+            if (r5 < 0) goto L_0x00a9
+            int r3 = r3 + r4
+            float r3 = (float) r3
+            int r3 = (r1 > r3 ? 1 : (r1 == r3 ? 0 : -1))
+            if (r3 <= 0) goto L_0x00ae
+        L_0x00a9:
+            r7.buttonPressed = r6
+            r7.invalidate()
+        L_0x00ae:
+            if (r2 != 0) goto L_0x00b4
+            boolean r2 = super.onTouchEvent(r8)
+        L_0x00b4:
+            return r2
+        */
+        throw new UnsupportedOperationException("Method not decompiled: im.bclpbkiauv.ui.components.PopupAudioView.onTouchEvent(android.view.MotionEvent):boolean");
+    }
+
+    private void didPressedButton() {
+        int i = this.buttonState;
+        if (i == 0) {
+            boolean result = MediaController.getInstance().playMessage(this.currentMessageObject);
+            if (!this.currentMessageObject.isOut() && this.currentMessageObject.isContentUnread() && this.currentMessageObject.messageOwner.to_id.channel_id == 0) {
+                MessagesController.getInstance(this.currentAccount).markMessageContentAsRead(this.currentMessageObject);
+                this.currentMessageObject.setContentIsRead();
+            }
+            if (result) {
+                this.buttonState = 1;
+                invalidate();
+            }
+        } else if (i == 1) {
+            if (MediaController.getInstance().lambda$startAudioAgain$5$MediaController(this.currentMessageObject)) {
+                this.buttonState = 0;
+                invalidate();
+            }
+        } else if (i == 2) {
+            FileLoader.getInstance(this.currentAccount).loadFile(this.currentMessageObject.getDocument(), this.currentMessageObject, 1, 0);
+            this.buttonState = 4;
+            invalidate();
+        } else if (i == 3) {
+            FileLoader.getInstance(this.currentAccount).cancelLoadFile(this.currentMessageObject.getDocument());
+            this.buttonState = 2;
+            invalidate();
+        }
+    }
+
+    public void updateProgress() {
+        if (this.currentMessageObject != null) {
+            if (!this.seekBar.isDragging()) {
+                this.seekBar.setProgress(this.currentMessageObject.audioProgress);
+            }
+            int duration = 0;
+            if (!MediaController.getInstance().isPlayingMessage(this.currentMessageObject)) {
+                int a = 0;
+                while (true) {
+                    if (a >= this.currentMessageObject.getDocument().attributes.size()) {
+                        break;
+                    }
+                    TLRPC.DocumentAttribute attribute = this.currentMessageObject.getDocument().attributes.get(a);
+                    if (attribute instanceof TLRPC.TL_documentAttributeAudio) {
+                        duration = attribute.duration;
+                        break;
+                    }
+                    a++;
+                }
+            } else {
+                duration = this.currentMessageObject.audioProgressSec;
+            }
+            String timeString = String.format("%02d:%02d", new Object[]{Integer.valueOf(duration / 60), Integer.valueOf(duration % 60)});
+            String str = this.lastTimeString;
+            if (str == null || (str != null && !str.equals(timeString))) {
+                this.timeWidth = (int) Math.ceil((double) this.timePaint.measureText(timeString));
+                this.timeLayout = new StaticLayout(timeString, this.timePaint, this.timeWidth, Layout.Alignment.ALIGN_NORMAL, 1.0f, 0.0f, false);
+            }
+            invalidate();
+        }
+    }
+
+    public void downloadAudioIfNeed() {
+        if (this.buttonState == 2) {
+            FileLoader.getInstance(this.currentAccount).loadFile(this.currentMessageObject.getDocument(), this.currentMessageObject, 1, 0);
+            this.buttonState = 3;
+            invalidate();
+        }
+    }
+
+    public void updateButtonState() {
+        String fileName = this.currentMessageObject.getFileName();
+        if (FileLoader.getPathToMessage(this.currentMessageObject.messageOwner).exists()) {
+            DownloadController.getInstance(this.currentAccount).removeLoadingFileObserver(this);
+            boolean playing = MediaController.getInstance().isPlayingMessage(this.currentMessageObject);
+            if (!playing || (playing && MediaController.getInstance().isMessagePaused())) {
+                this.buttonState = 0;
+            } else {
+                this.buttonState = 1;
+            }
+            this.progressView.setProgress(0.0f);
+        } else {
+            DownloadController.getInstance(this.currentAccount).addLoadingFileObserver(fileName, this);
+            if (!FileLoader.getInstance(this.currentAccount).isLoadingFile(fileName)) {
+                this.buttonState = 2;
+                this.progressView.setProgress(0.0f);
+            } else {
+                this.buttonState = 3;
+                Float progress = ImageLoader.getInstance().getFileProgress(fileName);
+                if (progress != null) {
+                    this.progressView.setProgress(progress.floatValue());
+                } else {
+                    this.progressView.setProgress(0.0f);
+                }
+            }
+        }
+        updateProgress();
+    }
+
+    public void onFailedDownload(String fileName, boolean canceled) {
+        updateButtonState();
+    }
+
+    public void onSuccessDownload(String fileName) {
+        updateButtonState();
+    }
+
+    public void onProgressDownload(String fileName, float progress) {
+        this.progressView.setProgress(progress);
+        if (this.buttonState != 3) {
+            updateButtonState();
+        }
+        invalidate();
+    }
+
+    public void onProgressUpload(String fileName, float progress, boolean isEncrypted) {
+    }
+
+    public int getObserverTag() {
+        return this.TAG;
+    }
+
+    public void onSeekBarDrag(float progress) {
+        MessageObject messageObject = this.currentMessageObject;
+        if (messageObject != null) {
+            messageObject.audioProgress = progress;
+            MediaController.getInstance().seekToProgress(this.currentMessageObject, progress);
+        }
+    }
+}

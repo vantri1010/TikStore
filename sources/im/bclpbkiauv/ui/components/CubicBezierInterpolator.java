@@ -1,0 +1,76 @@
+package im.bclpbkiauv.ui.components;
+
+import android.graphics.PointF;
+import android.view.animation.Interpolator;
+import com.google.firebase.remoteconfig.FirebaseRemoteConfig;
+
+public class CubicBezierInterpolator implements Interpolator {
+    public static final CubicBezierInterpolator DEFAULT = new CubicBezierInterpolator(0.25d, 0.1d, 0.25d, 1.0d);
+    public static final CubicBezierInterpolator EASE_BOTH = new CubicBezierInterpolator(0.42d, (double) FirebaseRemoteConfig.DEFAULT_VALUE_FOR_DOUBLE, 0.58d, 1.0d);
+    public static final CubicBezierInterpolator EASE_IN = new CubicBezierInterpolator(0.42d, (double) FirebaseRemoteConfig.DEFAULT_VALUE_FOR_DOUBLE, 1.0d, 1.0d);
+    public static final CubicBezierInterpolator EASE_OUT = new CubicBezierInterpolator((double) FirebaseRemoteConfig.DEFAULT_VALUE_FOR_DOUBLE, (double) FirebaseRemoteConfig.DEFAULT_VALUE_FOR_DOUBLE, 0.58d, 1.0d);
+    public static final CubicBezierInterpolator EASE_OUT_QUINT = new CubicBezierInterpolator(0.23d, 1.0d, 0.32d, 1.0d);
+    protected PointF a;
+    protected PointF b;
+    protected PointF c;
+    protected PointF end;
+    protected PointF start;
+
+    public CubicBezierInterpolator(PointF start2, PointF end2) throws IllegalArgumentException {
+        this.a = new PointF();
+        this.b = new PointF();
+        this.c = new PointF();
+        if (start2.x < 0.0f || start2.x > 1.0f) {
+            throw new IllegalArgumentException("startX value must be in the range [0, 1]");
+        } else if (end2.x < 0.0f || end2.x > 1.0f) {
+            throw new IllegalArgumentException("endX value must be in the range [0, 1]");
+        } else {
+            this.start = start2;
+            this.end = end2;
+        }
+    }
+
+    public CubicBezierInterpolator(float startX, float startY, float endX, float endY) {
+        this(new PointF(startX, startY), new PointF(endX, endY));
+    }
+
+    public CubicBezierInterpolator(double startX, double startY, double endX, double endY) {
+        this((float) startX, (float) startY, (float) endX, (float) endY);
+    }
+
+    public float getInterpolation(float time) {
+        return getBezierCoordinateY(getXForTime(time));
+    }
+
+    /* access modifiers changed from: protected */
+    public float getBezierCoordinateY(float time) {
+        this.c.y = this.start.y * 3.0f;
+        this.b.y = ((this.end.y - this.start.y) * 3.0f) - this.c.y;
+        this.a.y = (1.0f - this.c.y) - this.b.y;
+        return (this.c.y + ((this.b.y + (this.a.y * time)) * time)) * time;
+    }
+
+    /* access modifiers changed from: protected */
+    public float getXForTime(float time) {
+        float x = time;
+        for (int i = 1; i < 14; i++) {
+            float z = getBezierCoordinateX(x) - time;
+            if (((double) Math.abs(z)) < 0.001d) {
+                break;
+            }
+            x -= z / getXDerivate(x);
+        }
+        return x;
+    }
+
+    private float getXDerivate(float t) {
+        return this.c.x + (((this.b.x * 2.0f) + (this.a.x * 3.0f * t)) * t);
+    }
+
+    private float getBezierCoordinateX(float time) {
+        this.c.x = this.start.x * 3.0f;
+        this.b.x = ((this.end.x - this.start.x) * 3.0f) - this.c.x;
+        this.a.x = (1.0f - this.c.x) - this.b.x;
+        return (this.c.x + ((this.b.x + (this.a.x * time)) * time)) * time;
+    }
+}

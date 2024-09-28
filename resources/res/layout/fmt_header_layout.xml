@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/containerLayout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="220dp">
+    <FrameLayout android:id="@+id/containerTop" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_50">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:paddingTop="14dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="8dp">
+            <LinearLayout android:paddingLeft="@dimen/dp_8" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <FrameLayout android:id="@+id/flAvatarContainer" android:layout_width="60dp" android:layout_height="60dp">
+                    <im.bclpbkiauv.ui.components.BackupImageView android:layout_gravity="center" android:id="@+id/bivHeaderAvatar" android:layout_width="58dp" android:layout_height="58dp"/>
+                    <ImageView android:layout_gravity="bottom|right|center_vertical|center_horizontal|center" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/fmt_me_vip_icon"/>
+                </FrameLayout>
+                <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="50dp" android:layout_weight="1">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/parentUserName" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <TextView android:textSize="18sp" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@+id/tvUsername" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="200dp" android:maxLines="1" android:singleLine="true" android:lineSpacingExtra="@dimen/dp_10"/>
+                        <ImageView android:id="@+id/ivCdnVipFlag" android:visibility="gone" android:layout_width="17dp" android:layout_height="15dp" android:layout_marginLeft="5dp" android:src="@mipmap/cv_mine_flag"/>
+                    </LinearLayout>
+                    <TextView android:textSize="@dimen/sp_14" android:textColor="@color/color_333333" android:id="@+id/tvUserphone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="right" android:id="@+id/ivHeaderQRCode" android:layout_width="@dimen/dp_35" android:layout_height="@dimen/dp_35" android:layout_marginTop="@dimen/dp_12" android:layout_marginRight="@dimen/dp_16" android:src="@drawable/fmt_mev2_qrcode" android:scaleType="centerCrop"/>
+        <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center" android:padding="14dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_arrow_right"/>
+    </FrameLayout>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="bottom" android:orientation="horizontal" android:background="@drawable/shape_edit_bg" android:visibility="visible" android:layout_width="match_parent" android:layout_height="44dp" android:layout_marginLeft="@dimen/dp_20" android:layout_marginRight="@dimen/dp_20" android:layout_marginBottom="24dp">
+        <ImageView android:layout_width="23dp" android:layout_height="23dp" android:layout_marginLeft="@dimen/dp_15" android:src="@drawable/ic_smile"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="12sp" android:textStyle="bold" android:textColor="#242025" android:gravity="start" android:id="@+id/tv_edit_infomation" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="@dimen/dp_10" app:render="true" app:textKey="EditInfomationText"/>
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@+id/ll_fmt_nav_container" android:background="@drawable/shape_rect_round_gray" android:visibility="gone" android:layout_width="match_parent" android:layout_height="90dp" android:layout_marginLeft="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10">
+        <RelativeLayout android:id="@+id/rlWalletLayout" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:layout_weight="1">
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_wallet" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ImageView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:src="@drawable/fmt_mev2_wallet"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:gravity="center" android:id="@+id/tvWalletText" android:layout_width="match_parent" android:layout_height="wrap_content" app:render="true" app:textKey="Wallet"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/iv_wallet_unread" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginRight="20dp" android:src="@mipmap/ic_unread" android:layout_alignRight="@+id/ll_wallet"/>
+        </RelativeLayout>
+        <FrameLayout android:id="@+id/flCollectionLayou" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:layout_weight="1">
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:src="@drawable/fmt_mev2_collection"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:gravity="center" android:id="@+id/tvCollectionText" android:layout_width="match_parent" android:layout_height="wrap_content" app:render="true" app:textKey="MyCollection"/>
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@+id/flAlbumLayou" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:layout_weight="1">
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:src="@drawable/fmt_mev2_album"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:gravity="center" android:id="@+id/tvAlbumText" android:layout_width="match_parent" android:layout_height="wrap_content" app:render="true" app:textKey="SessionsTitle"/>
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:id="@+id/flEmojiLayout" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:layout_weight="1">
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:src="@drawable/fmt_mev2_emoji"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:gravity="center" android:id="@+id/tvStickerText" android:layout_width="match_parent" android:layout_height="wrap_content" app:render="true" app:textKey="Sticker"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:visibility="gone" android:layout_width="match_parent" android:layout_height="90dp" android:layout_marginLeft="@dimen/dp_16" android:layout_marginTop="88dp" android:layout_marginRight="@dimen/dp_16">
+        <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:layout_weight="1">
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/color_333333" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/tv_dynamic_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="0"/>
+                <TextView android:textSize="12sp" android:textColor="@color/color_text_999999" android:gravity="center" android:id="@+id/tv_dynamic" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/firendscircle_dynamic"/>
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:layout_weight="1">
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/color_333333" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/tv_focus_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="0"/>
+                <TextView android:textSize="12sp" android:textColor="@color/color_text_999999" android:gravity="center" android:id="@+id/tv_focus" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:layout_weight="1">
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/color_333333" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/tv_likes_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="0"/>
+                <TextView android:textSize="12sp" android:textColor="@color/color_text_999999" android:gravity="center" android:id="@+id/tv_likes" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/firendscircle_fans"/>
+            </LinearLayout>
+        </FrameLayout>
+        <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:layout_weight="1">
+            <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <TextView android:textColor="@color/color_333333" android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/tv_fans_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="0"/>
+                <TextView android:textSize="12sp" android:textColor="@color/color_text_999999" android:gravity="center" android:id="@+id/tv_fans" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/comments"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

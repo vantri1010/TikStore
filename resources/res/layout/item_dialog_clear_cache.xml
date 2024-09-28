@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
+        <ImageView android:id="@+id/iv_choose" android:background="@color/color_btm_text_selected" android:layout_width="18dp" android:layout_height="18dp" android:layout_marginLeft="16dp" android:layout_marginRight="11dp" android:scaleType="centerInside" android:layout_centerVertical="true"/>
+        <TextView android:textSize="14sp" android:textColor="#222222" android:gravity="center" android:id="@+id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="             " android:layout_toRightOf="@+id/iv_choose" android:layout_centerVertical="true"/>
+        <TextView android:textSize="14sp" android:textColor="#222222" android:gravity="center" android:id="@+id/tv_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="23dp" android:text="             " android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <TextView android:textSize="14sp" android:gravity="center" android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+</LinearLayout>

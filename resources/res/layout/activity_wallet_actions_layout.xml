@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/window_background_gray" android:layout_width="match_parent" android:layout_height="match_parent" app:srlDragRate="0.75" app:srlEnableLoadMore="true" app:srlEnablePureScrollMode="true">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:id="@+id/walletLayout" android:background="@color/window_background_gray" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent">
+            <im.bclpbkiauv.ui.hviews.MryLinearLayout android:orientation="vertical" android:background="@color/window_background_white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:layout_marginStart="@dimen/dp_16" android:layout_marginEnd="@dimen/dp_16" app:mryBorderColor="@color/cell_stroke_color" app:mryBorderWidth="0.5dp" app:mryRadius="16dp">
+                <im.bclpbkiauv.ui.components.TextCell android:id="@+id/passwordCell" android:layout_width="match_parent" android:layout_height="@dimen/dp_60"/>
+            </im.bclpbkiauv.ui.hviews.MryLinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

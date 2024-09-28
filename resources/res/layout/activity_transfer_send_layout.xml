@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#fffafafa" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="160dp">
+                <im.bclpbkiauv.ui.components.BackupImageView android:id="@+id/bivTransferAvatar" android:layout_width="64dp" android:layout_height="64dp" android:src="@mipmap/ic_logo"/>
+                <TextView android:textColor="#ff000000" android:gravity="center" android:id="@+id/tvTransferName" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="XX"/>
+            </LinearLayout>
+            <TextView android:textColor="#fffe5548" android:gravity="center" android:layout_gravity="bottom" android:id="@+id/tvPromtText" android:background="#ffe7e6" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="转账金额不低于0.01CG"/>
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@color/white" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="60dp">
+            <ImageView android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/tvHongbaoType" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:src="@mipmap/ic_red_pack" android:text="转账金额"/>
+            <FrameLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="30dp" android:layout_marginRight="13dp" android:layout_weight="1">
+                <EditText android:textColorHint="#ffcccccc" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/etTransferAmountView" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent" android:inputType="numberDecimal"/>
+                <TextView android:textSize="16sp" android:textColor="#ffcccccc" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/tvTransferHintView" android:background="@null" android:paddingRight="@dimen/dp_20" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </FrameLayout>
+            <TextView android:textColor="@color/color_text_black_222222" android:gravity="center_vertical" android:id="@+id/tvHongbaoUnit" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/UnitCNY"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="@dimen/dp_60" android:layout_marginTop="10dp">
+            <im.bclpbkiauv.ui.components.AppTextView android:textSize="16sp" android:textColor="@color/color_text_black_222222" android:gravity="center_vertical" android:paddingLeft="16dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/TransferMessageText" app:textKey="TransferMessageText"/>
+            <FrameLayout android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+                <EditText android:textSize="16sp" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/etTransferText" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent" android:maxLength="16" android:layout_weight="1"/>
+                <TextView android:textSize="16sp" android:textColor="#cccccc" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/tvTransferHintText" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="选填，最多16个字符" android:layout_weight="1"/>
+            </FrameLayout>
+        </LinearLayout>
+        <Button android:textColor="@color/white" android:id="@+id/btnSendTransferView" android:background="@drawable/btn_send_transfer_selector" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="25dp" android:layout_marginTop="50dp" android:layout_marginRight="25dp" android:text="确认转账"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

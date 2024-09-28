@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/listview" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" app:itemScrollDuration="200"/>
+    <im.bclpbkiauv.ui.components.RadialProgressView android:layout_gravity="center" android:id="@+id/progressBar" android:layout_width="36dp" android:layout_height="36dp"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/emptyLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="25dp" android:src="@mipmap/img_empty_default"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textColor="@color/color_text_gray_666666" android:id="@+id/tvEmptyText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:render="true" app:textKey="NoContactsApply"/>
+    </LinearLayout>
+</FrameLayout>

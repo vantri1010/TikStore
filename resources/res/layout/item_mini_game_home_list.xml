@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rl_mini_game" android:padding="@dimen/dp_8" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <ImageView android:id="@+id/iv_mini_game_icon" android:layout_width="match_parent" android:layout_height="wrap_content" android:scaleType="centerCrop" android:layout_alignParentTop="true"/>
+    <im.bclpbkiauv.ui.hviews.MryTextView android:ellipsize="end" android:gravity="center" android:id="@+id/tv_mini_game_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:singleLine="true" android:maxLength="5" android:layout_below="@+id/iv_mini_game_icon" android:textAlignment="center" app:render="true"/>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/fc_key_board_panel">
+    <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:id="@+id/bottom_comment_lin" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.cells.DividerCell android:layout_width="match_parent" android:layout_height="1px"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="45dp" android:layout_alignParentRight="true">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/lin_edittext" android:paddingTop="2dp" android:paddingBottom="2dp" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0dp" android:layout_height="40dp" android:layout_marginLeft="10dp" android:layout_marginTop="2dp" android:layout_marginRight="10dp" android:layout_marginBottom="2dp" android:layout_weight="1"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/menu_emoji" android:padding="3dp" android:layout_width="34dp" android:layout_height="34dp" android:src="@drawable/emoji_menu"/>
+            <im.bclpbkiauv.ui.components.ColorTextView android:textSize="14dp" android:textColor="#333333" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/btn_publish_comment" android:background="@drawable/bg_comment_grey_line" android:paddingLeft="10dp" android:paddingTop="3dp" android:paddingRight="10dp" android:paddingBottom="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="@string/frienscircle_publish" app:stringkey="frienscircle_publish"/>
+        </LinearLayout>
+        <cn.dreamtobe.kpswitch.widget.KPSwitchPanelLinearLayout android:orientation="vertical" android:id="@+id/lin_emoji_content" android:visibility="gone" android:layout_width="match_parent" android:layout_height="200dp"/>
+    </LinearLayout>
+</merge>

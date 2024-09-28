@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="@dimen/dp_60">
+    <LinearLayout android:gravity="center_vertical" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent" android:minHeight="@dimen/dp_52" android:paddingStart="@dimen/dp_16" android:paddingEnd="@dimen/dp_16">
+        <ImageView android:id="@+id/ivIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_my_qrcode" android:layout_marginEnd="@dimen/dp_10" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <TextView android:ellipsize="end" android:id="@+id/titleText" android:layout_width="0dp" android:layout_height="wrap_content" android:text="xxxxx" android:maxLines="1" android:layout_weight="1" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="0"/>
+        <TextView android:ellipsize="end" android:id="@+id/valueText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="xxxxx" android:maxLines="1" android:layout_marginStart="@dimen/dp_20" app:layout_constrainedWidth="true"/>
+        <ImageView android:id="@+id/ivArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_arrow_right" android:layout_marginStart="@dimen/dp_4"/>
+    </LinearLayout>
+    <im.bclpbkiauv.ui.hcells.MryDividerCell android:layout_gravity="bottom" android:id="@+id/divider" android:layout_width="match_parent" android:layout_height="1px"/>
+</merge>

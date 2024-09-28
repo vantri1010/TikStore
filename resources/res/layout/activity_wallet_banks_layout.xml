@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/window_background_gray" android:layout_width="match_parent" android:layout_height="match_parent" app:srlDragRate="0.75" app:srlEnableLoadMore="true" app:srlEnablePureScrollMode="true">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <include layout="@layout/activity_wallet_empty_bank_layout"/>
+            <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/listView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

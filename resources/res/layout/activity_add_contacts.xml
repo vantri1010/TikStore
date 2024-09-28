@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/searchLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.hviews.search.MrySearchView android:id="@+id/searchView" android:background="@drawable/shape_edit_bg" android:layout_width="match_parent" android:layout_height="@dimen/dp_40" android:layout_margin="10dp"/>
+    </FrameLayout>
+    <im.bclpbkiauv.ui.hviews.sliding.SlidingLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/rcvList" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp"/>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/llSearchLayout" android:paddingLeft="16dp" android:paddingRight="16dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="80dp">
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/icon_search_bg" android:scaleType="centerInside"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="@dimen/sp_16" android:gravity="center_vertical" android:id="@+id/tvSearchHeader" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_8" android:text="@string/SearchHint" android:layout_marginStart="@dimen/dp_48" app:render="true"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="@dimen/sp_16" android:gravity="center_vertical" android:id="@+id/tvSearchNumber" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_8" android:layout_weight="1" android:layout_marginStart="@dimen/dp_8"/>
+            </LinearLayout>
+        </FrameLayout>
+    </im.bclpbkiauv.ui.hviews.sliding.SlidingLayout>
+</LinearLayout>

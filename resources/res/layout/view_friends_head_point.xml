@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/fc_point_root" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <im.bclpbkiauv.ui.components.BackupImageView android:id="@+id/iv_head" android:visibility="invisible" android:layout_width="30dp" android:layout_height="30dp"/>
+    <View android:id="@+id/tv_fc_point" android:background="@drawable/shape_notify_point" android:layout_width="6dp" android:layout_height="6dp" android:layout_marginBottom="2dp" android:layout_marginStart="2dp" android:layout_toEndOf="@+id/iv_head"/>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="75.25dp">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/itemImage" android:layout_width="45dp" android:layout_height="47.5dp" android:src="@mipmap/icon_my_qr_code" android:scaleType="centerInside"/>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:layout_weight="1">
+            <TextView android:textSize="@dimen/dp_16" android:textColor="@color/color_text_black_000000" android:id="@+id/itemTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/MyQRCode"/>
+            <TextView android:textSize="12sp" android:textColor="@color/color_text_gray_888888" android:id="@+id/itemSubTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="@string/ShareToAdd"/>
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/icon_arrow_right"/>
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:id="@+id/vDivider" android:background="@color/divider" android:layout_width="match_parent" android:layout_height="0.25dp" android:layout_marginLeft="66dp"/>
+</FrameLayout>

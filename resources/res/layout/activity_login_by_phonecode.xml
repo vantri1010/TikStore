@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="29dp" android:paddingEnd="29dp">
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="27sp" android:textColor="@color/white" android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="103dp" app:mryTextStyle="1" app:textKey="LoginByPhoneCodeTitle"/>
+    <include layout="@layout/include_login_phone_or_account"/>
+    <include layout="@layout/include_login_verify_code"/>
+    <im.bclpbkiauv.ui.hviews.MryTextView android:enabled="false" android:textSize="12sp" android:textColor="#ededed" android:id="@+id/mryChangeIp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:lineSpacingExtra="5dp" app:mryAlphaEnable="false" app:mryTextStyle="4" app:textKey="NewAccountWillBeCreatedAutomatically"/>
+    <im.bclpbkiauv.ui.hviews.MryRoundButton android:enabled="false" android:textSize="15sp" android:id="@+id/btn" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="15dp" app:mryIsRadiusAdjustBounds="true" app:render="true" app:textKey="Login"/>
+    <Space android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/llPrivacyAgreement" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="39dp">
+        <im.bclpbkiauv.ui.hviews.MryCheckBox android:enabled="false" android:id="@+id/cbPrivacyAgreement" android:background="@drawable/check_blue_circle" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="15dp" android:layout_height="15dp" android:button="@null"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="12sp" android:textColor="@color/white" android:id="@+id/tvPrivacyAgreement" android:layout_width="wrap_content" android:layout_height="wrap_content" android:lineSpacingExtra="5dp" android:layout_marginStart="5dp" app:mryAlphaEnable="false" app:mryTextStyle="4" app:textKey="SignInMeansYouAgree"/>
+    </LinearLayout>
+</LinearLayout>

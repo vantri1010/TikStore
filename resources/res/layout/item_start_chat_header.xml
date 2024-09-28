@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="65dp">
+    <ImageView android:id="@+id/iv_icon" android:layout_width="47.5dp" android:layout_height="42.5dp" android:layout_marginLeft="12dp" android:src="@mipmap/ic_add_phone_user"/>
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:id="@+id/tv_title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/AddPhonbook" android:layout_weight="1" app:render="true"/>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:src="@mipmap/icon_arrow_right"/>
+</LinearLayout>

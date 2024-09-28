@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/color_window_qr_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="12sp" android:gravity="center_vertical" android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="40dp" android:text="群组类型"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_public_layout" android:background="@color/white" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_public_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_selected"/>
+        <TextView android:gravity="center_vertical" android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="match_parent" android:text="公开"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/ll_private_layout" android:background="@color/white" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="@dimen/dp_48">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_private_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_selected"/>
+        <TextView android:gravity="center_vertical" android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="match_parent" android:text="私人"/>
+    </LinearLayout>
+    <TextView android:textSize="12sp" android:gravity="center_vertical" android:id="@+id/tv_chat_type_desc" android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="40dp" android:text="任何人都可以搜索和加入群组，并查看其历史记录"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="12sp" android:gravity="center_vertical" android:paddingLeft="@dimen/dp_16" android:paddingTop="2dp" android:paddingBottom="2dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="群号"/>
+        <EditText android:id="@+id/et_public_view" android:background="@color/white" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:hint="以字母开头，字母和数字的8-24位组合"/>
+        <TextView android:textSize="12sp" android:gravity="center_vertical" android:paddingLeft="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="40dp" android:text="其他用户可以通过搜索群号加入群组"/>
+    </LinearLayout>
+</LinearLayout>

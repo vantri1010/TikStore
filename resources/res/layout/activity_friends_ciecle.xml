@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/containerTab" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.tablayout.SlidingTabLayout android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/tabLayout" android:layout_width="wrap_content" android:layout_height="35dp" app:tl_divider_color="@android:color/transparent" app:tl_indicator_color="#ffb6eafc" app:tl_indicator_corner_radius="2dp" app:tl_indicator_end_color="#ff36c4fd" app:tl_indicator_height="4dp" app:tl_indicator_margin_top="4dp" app:tl_indicator_width="14dp" app:tl_tab_padding="14dp" app:tl_textBold="1" app:tl_textNormalSize="16sp" app:tl_textSelectColor="#ff000000" app:tl_textSelectSize="18sp" app:tl_textUnSelectColor="#ff666666"/>
+    </FrameLayout>
+    <im.bclpbkiauv.ui.hviews.NoScrollViewPager android:id="@+id/viewpager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</FrameLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <im.bclpbkiauv.ui.hui.views.ArcView android:clipChildren="false" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="-25dp"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/llUserLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <im.bclpbkiauv.ui.components.BackupImageView android:layout_gravity="center_horizontal" android:id="@+id/ivRptAvatar" android:layout_width="@dimen/dp_60" android:layout_height="@dimen/dp_60" android:layout_marginTop="100dp" android:src="@mipmap/ic_logo"/>
+            <TextView android:textSize="@dimen/sp_16" android:textColor="@color/white" android:gravity="center" android:id="@+id/tvRptName" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="xixi"/>
+            <TextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tvRptGreet" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="20dp" android:text="很高兴遇见你！"/>
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:layout_gravity="center_vertical" android:id="@+id/ivHotCoinLogo" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:src="@mipmap/ic_red_pack"/>
+                <TextView android:textSize="@dimen/sp_16" android:textColor="@color/white" android:gravity="center" android:id="@+id/tvReceivedCount" android:paddingLeft="@dimen/dp_5" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="20.00！"/>
+            </LinearLayout>
+            <TextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tvReceivedPromt" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="20dp" android:text="已存入余额，详情钱包查看"/>
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/zsLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="20dp">
+                <im.bclpbkiauv.ui.components.BackupImageView android:id="@+id/zsAvatar" android:layout_width="@dimen/dp_25" android:layout_height="@dimen/dp_25"/>
+                <TextView android:textSize="14sp" android:textColor="#fffad59c" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/zsText" android:paddingLeft="@dimen/dp_10" android:paddingRight="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

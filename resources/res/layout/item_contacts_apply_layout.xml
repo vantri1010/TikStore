@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="65dp">
+    <RelativeLayout android:id="@+id/rlMainLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+        <im.bclpbkiauv.ui.components.BackupImageView android:id="@+id/avatarImage" android:layout_width="54dp" android:layout_height="54dp" android:layout_marginLeft="12dp" android:layout_centerVertical="true"/>
+        <RelativeLayout android:id="@+id/rlRight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="13sp" android:textColor="@color/color_text_black_222222" android:gravity="center" android:id="@+id/statusText2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="已添加"/>
+            <im.bclpbkiauv.ui.hviews.MryRoundButton android:textSize="13sp" android:id="@+id/statusText" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="55dp" android:minHeight="26dp" android:text="@string/Agree" app:mryIsRadiusAdjustBounds="true" app:render="true" app:textKey="RechargeImmediate"/>
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_toLeftOf="@+id/rlRight" android:layout_toRightOf="@+id/avatarImage" android:layout_centerVertical="true">
+            <TextView android:textSize="@dimen/dp_16" android:textColor="@color/color_text_black_222222" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/nameText" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" android:textAlignment="viewStart"/>
+            <TextView android:textSize="@dimen/dp_14" android:textColor="@color/color_text_gray_a7a7a7" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/bioText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:maxLines="1" android:singleLine="true" android:textAlignment="viewStart"/>
+        </LinearLayout>
+        <im.bclpbkiauv.ui.cells.DividerCell android:id="@+id/divider" android:layout_width="match_parent" android:layout_height="1px" android:layout_alignLeft="@+id/ll_name" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</LinearLayout>

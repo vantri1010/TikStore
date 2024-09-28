@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/window_background_gray" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/refreshLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+            <FrameLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <com.library.MyRecyclerViewList android:id="@+id/listView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/dp_16" android:layout_marginStart="@dimen/dp_12" android:layout_marginEnd="@dimen/dp_12"/>
+                <include layout="@layout/activity_wallet_empty_records_layout"/>
+            </FrameLayout>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    </LinearLayout>
+</FrameLayout>

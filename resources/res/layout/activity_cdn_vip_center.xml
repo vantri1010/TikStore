@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/ivBgTop" android:layout_width="match_parent" android:layout_height="200dp" android:src="@mipmap/cv_center_top_bg" android:scaleType="fitXY"/>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingLeft="25dp" android:paddingRight="25dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="85dp">
+                    <im.bclpbkiauv.ui.hviews.MryFrameLayout android:background="@color/white" android:layout_width="62dp" android:layout_height="62dp" app:mryRadius="8dp">
+                        <im.bclpbkiauv.ui.components.BackupImageView android:layout_gravity="center" android:id="@+id/ivAvatar" android:layout_width="59dp" android:layout_height="59dp"/>
+                    </im.bclpbkiauv.ui.hviews.MryFrameLayout>
+                    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="17sp" android:id="@+id/tvUserName" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_weight="1" app:render="true"/>
+                    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="18sp" android:gravity="center" android:id="@+id/tvVipTop" android:background="@mipmap/cv_center_top_is_vip_false" android:paddingBottom="7dp" android:layout_width="64dp" android:layout_height="53dp" android:text="VIP" app:mryTextStyle="1"/>
+                </LinearLayout>
+            </FrameLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-40dp">
+                <LinearLayout android:orientation="vertical" android:id="@+id/llBottom" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="16sp" android:layout_gravity="center_horizontal" android:id="@+id/tvStatusOrTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="65dp" app:mryTextStyle="1" app:render="true" app:textKey="ChooseTheOpeningTime"/>
+                    <androidx.constraintlayout.widget.ConstraintLayout android:layout_gravity="center_horizontal" android:id="@+id/card" android:layout_width="165dp" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:minHeight="150dp">
+                        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="11sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tvBaoYue" android:background="@mipmap/cv_center_baoyue_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toTopOf="0" app:textKey="MonthlySubscription"/>
+                        <FrameLayout android:textColor="@color/white" android:gravity="center" android:background="@mipmap/cv_center_jiaobiao" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginLeft="10dp" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+                            <ImageView android:layout_gravity="end" android:layout_width="13dp" android:layout_height="9dp" android:layout_marginTop="4dp" android:layout_marginRight="4dp" android:src="@mipmap/fc_icon_item_location_selected" app:tint="@color/white"/>
+                        </FrameLayout>
+                        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="42sp" android:textColor="#3bc0ff" android:id="@+id/tvTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toBottomOf="@+id/tvBaoYue" app:mryTextStyle="1"/>
+                        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="20sp" android:id="@+id/tvUnitPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toBottomOf="@+id/tvTime" app:mryTextStyle="1" app:render="true"/>
+                        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="10sp" android:ellipsize="end" android:id="@+id/tvTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:singleLine="true" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintTop_toBottomOf="@+id/tvUnitPrice" app:textKey="CdnVipCenterTips"/>
+                        <ImageView android:background="@mipmap/cv_center_card_bottom_bg" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/btn" android:background="@mipmap/cv_center_btn_bg" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_marginTop="25dp" app:textKey="OpenAppVIPNow"/>
+                    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="16sp" android:id="@+id/tvTeQuan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="30dp" android:text="VIP特权" app:mryTextStyle="1" app:render="true" app:textKey="VIPPrivilege"/>
+                    <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/rv" android:paddingLeft="16dp" android:paddingRight="16dp" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:overScrollMode="never"/>
+                    <TextView android:textSize="10sp" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/tvBottomTips" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="15dp" android:layout_marginRight="20dp" android:layout_marginBottom="5dp"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/ivBgBottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:src="@mipmap/cv_center_bottom_bg" android:scaleType="fitXY" android:layout_alignTop="@+id/llBottom" android:layout_alignBottom="@+id/llBottom"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <FrameLayout android:id="@+id/actionBarContainer" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</FrameLayout>

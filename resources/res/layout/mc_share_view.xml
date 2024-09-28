@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rlContainer" android:background="@mipmap/iv_mc_share_bg2" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <androidx.cardview.widget.CardView android:layout_gravity="center" android:background="#ffffff" android:layout_width="wrap_content" android:layout_height="wrap_content" app:cardCornerRadius="5dp" app:cardElevation="10dp" app:cardUseCompatPadding="true">
+            <im.bclpbkiauv.ui.hviews.MryImageView android:id="@+id/ivQrCode" android:padding="4dp" android:layout_width="104dp" android:layout_height="104dp"/>
+        </androidx.cardview.widget.CardView>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="18sp" android:textColor="#333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="हृदयप्रिय️"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="@dimen/sp_16" android:textColor="#999999" android:id="@+id/tvInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:layout_marginBottom="25dp" android:text="识别/扫描二维码"/>
+    </LinearLayout>
+</RelativeLayout>

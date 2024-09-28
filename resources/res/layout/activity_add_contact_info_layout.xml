@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<im.bclpbkiauv.ui.hviews.sliding.SlidingLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@color/selector_grey" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/llInfoLayout" android:background="@color/white" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="19dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17dp">
+                    <im.bclpbkiauv.ui.components.BackupImageView android:layout_gravity="center_vertical" android:id="@+id/avatarImage" android:layout_width="48dp" android:layout_height="48dp"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:ellipsize="end" android:id="@+id/mryNameView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:maxLines="1" android:singleLine="true" android:layout_weight="1" app:render="true"/>
+                            <ImageView android:id="@+id/ivGender" android:visibility="gone" android:layout_width="24dp" android:layout_height="24dp" android:src="@mipmap/ic_male" android:scaleType="centerInside"/>
+                        </LinearLayout>
+                        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="12sp" android:textColor="@color/color_text_999999" android:id="@+id/tv_update_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <FrameLayout android:id="@+id/flReplyLayout" android:background="@drawable/shape_rect_round_gray" android:paddingLeft="12dp" android:paddingTop="12dp" android:paddingRight="6dp" android:paddingBottom="21dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_20">
+                    <TextView android:id="@+id/tvReplyText" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/rcvReplyList" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="30dp"/>
+                    <TextView android:textSize="15sp" android:textColor="#ff5080b5" android:layout_gravity="bottom" android:id="@+id/tvReplyButton" android:paddingTop="5dp" android:paddingRight="5dp" android:paddingBottom="5dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="回复"/>
+                </FrameLayout>
+            </LinearLayout>
+            <im.bclpbkiauv.ui.hcells.MryDividerCell android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="16dp"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:gravity="center_vertical" android:id="@+id/tvNoteSettingView" android:background="@color/white" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/dp_56" android:drawableRight="@mipmap/icon_arrow_right" app:render="true" app:textKey="SetGroupingAndRemarks"/>
+            <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/rlBioSettingView" android:background="@color/white" android:paddingLeft="16dp" android:paddingTop="10dp" android:paddingRight="16dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:minHeight="55dp">
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="#cccccc" android:id="@+id/tvBioDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/UserBio" app:render="true"/>
+                <TextView android:textSize="14sp" android:ellipsize="end" android:gravity="right" android:id="@+id/tvBioText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:maxLines="2" android:singleLine="true" android:layout_toRightOf="@+id/tvBioDesc" android:layout_alignParentRight="true" android:lineSpacingExtra="3dp"/>
+            </RelativeLayout>
+            <im.bclpbkiauv.ui.hcells.MryDividerCell android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="16dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llOriginalView" android:background="@color/white" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="55dp">
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:id="@+id/tvOriginalDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="来源" app:render="true"/>
+                <TextView android:textSize="14sp" android:gravity="end" android:id="@+id/tvOriginalText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp"/>
+            </LinearLayout>
+            <TextView android:textSize="14sp" android:textColor="#238aff" android:gravity="center" android:id="@+id/tvAddContactStatus" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="10dp" android:text="@string/AddFriends"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</im.bclpbkiauv.ui.hviews.sliding.SlidingLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="@dimen/new_call_listitem_height">
+    <im.bclpbkiauv.ui.components.ColorRelativeLayout android:id="@+id/rl_content" android:layout_width="match_parent" android:layout_height="match_parent">
+        <im.bclpbkiauv.ui.components.BackupImageView android:id="@+id/iv_head_img" android:layout_width="@dimen/new_call_listitem_img_width" android:layout_height="@dimen/new_call_listitem_img_width" android:layout_marginLeft="@dimen/new_call_listitem_left_margin" android:layout_centerVertical="true"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_8" android:layout_toLeftOf="@+id/tv_date" android:layout_toRightOf="@+id/iv_head_img" android:layout_centerVertical="true">
+            <im.bclpbkiauv.ui.components.ColorTextView android:textSize="14sp" android:textColor="#ff000000" android:ellipsize="end" android:id="@+id/tv_nick_name" android:paddingRight="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="    xxxxxx" android:lines="1" app:textviewType="label"/>
+            <im.bclpbkiauv.ui.components.ColorTextView android:textSize="12sp" android:textColor="#ff999999" android:id="@+id/tv_call_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="7.5dp" android:text="      " android:drawableLeft="@mipmap/ic_new_call_in" android:drawablePadding="11dp" app:textviewType="value"/>
+        </LinearLayout>
+        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="13sp" android:textColor="#ff999999" android:id="@+id/tv_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="星期二" android:layout_toLeftOf="@+id/iv_more" android:layout_centerVertical="true" app:textviewType="value"/>
+        <ImageView android:id="@+id/iv_more" android:layout_width="@dimen/new_call_listitem_more_width" android:layout_height="@dimen/new_call_listitem_more_width" android:layout_marginRight="@dimen/new_call_listitem_left_margin" android:src="@drawable/new_call_gth" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <im.bclpbkiauv.ui.hcells.MryDividerCell android:id="@+id/divider" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignLeft="@+id/tv_nick_name" android:layout_alignParentBottom="true"/>
+    </im.bclpbkiauv.ui.components.ColorRelativeLayout>
+    <FrameLayout android:layout_width="1000dp" android:layout_height="match_parent">
+        <FrameLayout android:background="@color/color_item_menu_red_f74c31" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="7.5dp">
+            <TextView android:textSize="16sp" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/btnDelete" android:layout_width="78.5dp" android:layout_height="match_parent" android:text="@string/Delete"/>
+        </FrameLayout>
+    </FrameLayout>
+</LinearLayout>

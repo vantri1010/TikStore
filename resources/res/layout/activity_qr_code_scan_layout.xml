@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <SurfaceView android:id="@+id/surfaceView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.king.zxing.ViewfinderView android:id="@+id/viewfinderView" android:layout_width="match_parent" android:layout_height="match_parent" app:cornerColor="@color/color_btm_text_selected" app:frameColor="@color/color_btm_text_selected" app:gridHeight="0dp" app:labelText="@string/PutQrCodeInbox" app:labelTextLocation="1" app:labelTextSize="14sp" app:laserColor="@color/qr_scan_laser" app:laserStyle="2" app:resultPointColor="@color/bbl_ff0000"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_my_qr_code" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_scan_my_qr_code"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:textColor="#3bbcff" android:id="@+id/tv_my_qrcode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:text="@string/MyQRCode"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/ivBack" android:layout_width="48dp" android:layout_height="48dp" android:src="@mipmap/ic_back" android:scaleType="centerInside"/>
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@string/Scan" android:layout_centerHorizontal="true" app:textKey="Scan"/>
+    <LinearLayout android:layout_gravity="bottom" android:id="@+id/llBottomLayout" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="4" android:layout_alignParentBottom="true">
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_gravity="center" android:id="@+id/ivGallery" android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/fmt_contacts_channel" android:scaleType="centerInside"/>
+            <TextView android:gravity="center" android:id="@+id/tvGallery" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/Gallery"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <ImageView android:layout_gravity="center" android:id="@+id/flash_switch" android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/fmt_contacts_channel" android:scaleType="centerInside"/>
+            <TextView android:gravity="center" android:id="@+id/tvFlash" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/FlashOn"/>
+        </LinearLayout>
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>

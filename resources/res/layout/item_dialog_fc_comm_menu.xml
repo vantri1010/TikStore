@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="@dimen/dp_60">
+    <LinearLayout android:gravity="start" android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_item_menu_container" android:paddingTop="@dimen/dp_18" android:paddingBottom="@dimen/dp_18" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="@dimen/dp_25" android:paddingEnd="@dimen/dp_25">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/iv_image" android:visibility="visible" android:layout_width="@dimen/dp_25" android:layout_height="@dimen/dp_25" android:src="@drawable/fc_pop_shield" android:scaleType="centerInside" android:layout_marginEnd="@dimen/dp_14"/>
+        <TextView android:textSize="16sp" android:textColor="#268cff" android:gravity="center_vertical" android:id="@+id/tv_view" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+    </LinearLayout>
+    <View android:id="@+id/tv_bottom" android:background="#ffededed" android:layout_width="match_parent" android:layout_height="1dp"/>
+</LinearLayout>

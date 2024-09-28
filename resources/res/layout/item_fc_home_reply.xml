@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<im.bclpbkiauv.ui.hui.friendscircle_v1.view.richtext.RichTextView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:textSize="@dimen/sp_14" android:textColor="#ff222222" android:id="@+id/txt_comment" android:paddingBottom="@dimen/dp_5" android:layout_width="match_parent" android:layout_height="wrap_content" app:textviewType="label"/>

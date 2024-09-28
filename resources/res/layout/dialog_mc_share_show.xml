@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:background="@mipmap/iv_mc_share_bg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="17sp" android:textStyle="bold" android:textColor="#3bbcff" android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="हृदयप्रिय️" android:layout_centerHorizontal="true"/>
+        <im.bclpbkiauv.ui.hviews.MryImageView android:id="@+id/ivQrCode" android:layout_width="171dp" android:layout_height="171dp" android:layout_marginTop="40dp" android:layout_centerHorizontal="true"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="11sp" android:textColor="#b1b1b1" android:id="@+id/tvInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-4dp" android:layout_below="@+id/ivQrCode" android:layout_centerHorizontal="true"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/llShareUrl" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35dp" android:layout_below="@+id/tvInfo" android:layout_centerHorizontal="true">
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:textColor="#ffffff" android:id="@+id/tvUrl" android:layout_width="146dp" android:layout_height="wrap_content" android:singleLine="true"/>
+            <im.bclpbkiauv.ui.hviews.MryImageView android:id="@+id/ivCopy" android:background="@mipmap/iv_mc_share_copy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="15dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="17dp" android:layout_below="@+id/llShareUrl">
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="13sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/tvSave" android:background="@mipmap/iv_mc_share_text_bg" android:layout_width="0dp" android:layout_height="37dp" android:layout_marginLeft="24dp" android:layout_weight="1"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="13sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/tvShare" android:background="@mipmap/iv_mc_share_text_bg" android:layout_width="0dp" android:layout_height="37dp" android:layout_marginLeft="13dp" android:layout_marginRight="24dp" android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <im.bclpbkiauv.ui.hviews.MryImageView android:layout_gravity="center" android:id="@+id/ivCancel" android:background="@mipmap/iv_mc_share_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="23dp"/>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingLeft="29dp" android:paddingRight="29dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="27sp" android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" app:mryTextStyle="1" app:render="true" app:textKey="PleaseInputVerifyCodeHint"/>
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:id="@+id/tvTips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40dp" app:mryTextStyle="4" app:render="true" app:textKey="PleaseInputVerifyCodeHint"/>
+    <im.bclpbkiauv.ui.hviews.PasswordEditText android:textSize="22sp" android:id="@+id/etCode" android:background="@null" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="20dp" android:inputType="number" app:lineColor="@color/black" app:lineWidth="1dp" app:marginEach="29dp" app:maxCount="5" app:psdType="1" app:showCursor="true" app:textVariationType="true"/>
+    <im.bclpbkiauv.ui.hviews.MryRoundButton android:id="@+id/btn" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

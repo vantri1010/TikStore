@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="155dp">
+    <View android:id="@+id/view1" android:layout_width="10dp" android:layout_height="10dp" android:layout_alignParentRight="true"/>
+    <View android:id="@+id/view2" android:layout_width="10dp" android:layout_height="10dp" android:layout_alignParentLeft="true"/>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/friends_circle_pop_bg" android:layout_width="match_parent" android:layout_height="155dp" android:layout_toLeftOf="@+id/view1" android:layout_toRightOf="@+id/view2">
+        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="15sp" android:textColor="#ff222222" android:gravity="center_vertical" android:id="@+id/pop_1" android:paddingLeft="22dp" android:layout_width="match_parent" android:layout_height="51dp" android:text="@string/provicy_other_fc_item" android:drawableLeft="@drawable/fc_pop_shield" android:drawablePadding="10dp" app:stringkey="provicy_other_fc_item"/>
+        <View android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="15sp" android:textColor="#ff222222" android:gravity="center_vertical" android:id="@+id/pop_2" android:paddingLeft="22dp" android:layout_width="match_parent" android:layout_height="51dp" android:text="@string/fc_no_look_theyfc" android:drawableLeft="@drawable/fc_pop_shield_all" android:drawablePadding="10dp" app:stringkey="fc_no_look_theyfc"/>
+        <View android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="15sp" android:textColor="#ff222222" android:gravity="center_vertical" android:id="@+id/pop_3" android:paddingLeft="22dp" android:layout_width="match_parent" android:layout_height="51dp" android:text="@string/ReportChat" android:drawableLeft="@drawable/fc_pop_report" android:drawablePadding="10dp" app:stringkey="ReportChat"/>
+    </LinearLayout>
+</RelativeLayout>

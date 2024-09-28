@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:overScrollMode="never">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="27sp" android:id="@+id/tvTitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" app:mryTextStyle="1" app:render="true" app:textKey="ImprovePersonalInformation"/>
+        <FrameLayout android:layout_gravity="center_horizontal" android:id="@+id/containerAvatar" android:visibility="visible" android:layout_width="94dp" android:layout_height="94dp" android:layout_marginTop="35dp">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/containerCamera" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/ivCamera" android:layout_width="94dp" android:layout_height="94dp" android:src="@mipmap/icon_create_group_camera"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="12sp" android:id="@+id/tvCamera" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="@string/UploadYouAvatar" app:mryTextStyle="1" app:textKey="UploadYouAvatar"/>
+            </LinearLayout>
+            <im.bclpbkiauv.ui.components.BackupImageView android:layout_gravity="center" android:id="@+id/ivAvatar" android:layout_width="94dp" android:layout_height="94dp"/>
+            <im.bclpbkiauv.ui.components.RadialProgressView android:layout_gravity="center" android:id="@+id/ivAvatarProgress" android:visibility="gone" android:layout_width="64dp" android:layout_height="64dp"/>
+        </FrameLayout>
+        <LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/containerGenderSelect" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:minHeight="37dp">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/containerMale" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:minWidth="82dp" android:layout_marginEnd="15dp">
+                <ImageView android:id="@+id/ivMale" android:layout_width="15dp" android:layout_height="15dp" android:src="@mipmap/ic_change_info_male" android:layout_marginEnd="10dp"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="12sp" android:id="@+id/tvMale" android:layout_width="wrap_content" android:layout_height="wrap_content" app:mryTextStyle="1" app:textKey="PassportMale"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/containerFemale" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:minWidth="82dp" android:layout_marginStart="15dp">
+                <ImageView android:id="@+id/ivFemale" android:layout_width="13dp" android:layout_height="17dp" android:src="@mipmap/ic_change_info_female" android:layout_marginEnd="10dp"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="12sp" android:id="@+id/tvFemale" android:layout_width="wrap_content" android:layout_height="wrap_content" app:mryTextStyle="1" app:textKey="PassportFemale"/>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="@dimen/dp_40" android:layout_marginStart="@dimen/dp_16">
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="@dimen/dp_16" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/NicknameTips" app:mryTextStyle="4" app:textKey="NicknameTips"/>
+            <im.bclpbkiauv.ui.hviews.MryEditText android:textSize="15sp" android:gravity="right|center_vertical|center_horizontal|center|end" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/etNickName" android:background="@null" android:layout_width="260dp" android:layout_height="55dp" android:singleLine="true" android:layout_weight="1" android:imeOptions="actionNext" android:layout_marginEnd="@dimen/dp_16" app:hintKey="PleaseEnterNickName" app:mryTextStyle="4" app:render="true"/>
+            <View android:layout_gravity="bottom" android:background="@color/color_e7e7e7" android:layout_width="match_parent" android:layout_height="@dimen/dp_1"/>
+        </FrameLayout>
+        <FrameLayout android:id="@+id/selectDataOfBirthParent" android:visibility="visible" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="@dimen/dp_12" android:layout_marginStart="@dimen/dp_16">
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="@dimen/dp_16" android:gravity="center_vertical" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/tvDate" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/PleaseSelectDateOfBirth" android:hint="@string/PleaseSelectDateOfBirth" app:hintKey="PleaseSelectDateOfBirth" app:mryTextStyle="4"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:gravity="right|center_vertical|center_horizontal|center|end" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/tvSelectDateOfBirth" android:layout_width="200dp" android:layout_height="match_parent" android:minHeight="55dp" android:layout_marginEnd="40dp"/>
+            <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/ivMore" android:layout_width="16dp" android:layout_height="16dp" android:src="@mipmap/icon_arrow_right" android:layout_marginEnd="@dimen/dp_16"/>
+            <View android:layout_gravity="bottom" android:background="@color/color_e7e7e7" android:layout_width="match_parent" android:layout_height="@dimen/dp_1"/>
+        </FrameLayout>
+        <FrameLayout android:id="@+id/selectSexParent" android:visibility="visible" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="@dimen/dp_12" android:layout_marginStart="@dimen/dp_16">
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="@dimen/dp_16" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/PleaseSelectGender" android:layout_marginEnd="@dimen/dp_40" app:hintKey="PleaseSelectGender" app:mryTextStyle="4"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:gravity="center_vertical" android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/tvSelectSex" android:layout_width="wrap_content" android:layout_height="match_parent" android:minHeight="55dp" android:layout_marginEnd="40dp"/>
+            <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center|end" android:id="@+id/ivSex" android:layout_width="16dp" android:layout_height="16dp" android:src="@mipmap/icon_arrow_right" android:layout_marginEnd="@dimen/dp_16"/>
+            <View android:layout_gravity="bottom" android:background="@color/color_e7e7e7" android:layout_width="match_parent" android:layout_height="@dimen/dp_1"/>
+        </FrameLayout>
+        <im.bclpbkiauv.ui.hviews.MryRoundButton android:enabled="false" android:textSize="15sp" android:id="@+id/btnDone" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="25dp" android:layout_marginStart="@dimen/dp_16" android:layout_marginEnd="@dimen/dp_16" app:mryIsRadiusAdjustBounds="true" app:mryRadius="@dimen/dp_8" app:mryTextStyle="4" app:textKey="Done"/>
+        <Space android:layout_width="match_parent" android:layout_height="0dp" android:minHeight="80dp" android:layout_weight="1"/>
+    </LinearLayout>
+</ScrollView>

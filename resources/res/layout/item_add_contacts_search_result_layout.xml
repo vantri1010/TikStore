@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="65dp">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <im.bclpbkiauv.ui.components.BackupImageView android:layout_gravity="center_vertical" android:id="@+id/itemImage" android:layout_width="45dp" android:layout_height="45dp"/>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_weight="1">
+            <TextView android:textSize="14sp" android:textColor="@color/color_text_black_000000" android:id="@+id/itemTitle" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textSize="12sp" android:textColor="@color/color_text_gray_888888" android:id="@+id/itemSubTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:id="@+id/vDivider" android:background="@color/divider" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_marginLeft="66dp"/>
+</FrameLayout>

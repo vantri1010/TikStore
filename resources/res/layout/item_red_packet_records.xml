@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="80dp">
+    <FrameLayout android:id="@+id/ffAvatarLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_centerVertical="true">
+        <im.bclpbkiauv.ui.components.BackupImageView android:id="@+id/iv_avatar" android:background="@mipmap/ic_wx_circle" android:layout_width="45dp" android:layout_height="45dp"/>
+        <ImageView android:id="@+id/iv_default_avatar" android:background="@mipmap/ic_wx_circle" android:visibility="gone" android:layout_width="45dp" android:layout_height="45dp" android:scaleType="centerInside"/>
+    </FrameLayout>
+    <LinearLayout android:gravity="right" android:orientation="vertical" android:id="@+id/llRightLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="16sp" android:textColor="@color/black" android:id="@+id/tv_CG_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20.00"/>
+            <ImageView android:id="@+id/tvMoneyUnit" android:layout_width="@dimen/dp_15" android:layout_height="@dimen/dp_15" android:layout_marginTop="@dimen/dp_3" android:src="@mipmap/ic_red_pack"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/iv_best" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:layout_marginRight="@dimen/dp_5" android:src="@mipmap/icon_feature_best"/>
+            <TextView android:textSize="13sp" android:textColor="@color/color_text_999999" android:id="@+id/tv_state" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:text="已领取"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="13dp" android:layout_marginRight="@dimen/dp_15" android:layout_toLeftOf="@+id/llRightLayout" android:layout_toRightOf="@+id/ffAvatarLayout" android:layout_centerVertical="true">
+        <TextView android:textSize="16sp" android:textColor="@color/black" android:ellipsize="end" android:id="@+id/tv_type_and_from" android:paddingRight="@dimen/dp_20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="个人红包-来自TOMxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxaaaxxxxxxxxxxx" android:maxLines="1" android:singleLine="true"/>
+        <TextView android:textSize="13sp" android:textColor="@color/color_text_999999" android:id="@+id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:text="11月20日 21:16"/>
+    </LinearLayout>
+</RelativeLayout>

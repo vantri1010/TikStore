@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<im.bclpbkiauv.ui.hviews.sliding.SlidingLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/llUserLayout" android:layout_width="match_parent" android:layout_height="match_parent">
+                <FrameLayout android:layout_width="match_parent" android:layout_height="294dp">
+                    <im.bclpbkiauv.ui.hui.views.ArcView android:clipChildren="false" android:layout_width="match_parent" android:layout_height="306dp"/>
+                    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                        <im.bclpbkiauv.ui.components.BackupImageView android:layout_gravity="center_horizontal" android:id="@+id/ivRptAvatar" android:layout_width="60dp" android:layout_height="60dp" android:layout_marginTop="120dp" android:src="@mipmap/ic_red_pack"/>
+                        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/white" android:gravity="center" android:id="@+id/tvRptName" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_16" android:text="xixi"/>
+                        <TextView android:textSize="@dimen/sp_16" android:textColor="@color/white" android:gravity="center" android:id="@+id/tvRptGreet" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="很高兴遇见你！"/>
+                    </LinearLayout>
+                </FrameLayout>
+                <View android:background="@color/divider" android:layout_width="match_parent" android:layout_height="0.25dp"/>
+                <TextView android:gravity="center_vertical" android:id="@+id/tvRptState" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="50dp" android:text="该红包已过期。已领取0/1个，共0.00/1.00CG"/>
+                <View android:background="@color/divider" android:layout_width="match_parent" android:layout_height="0.25dp"/>
+                <FrameLayout android:id="@+id/fl_rpk_record_layout" android:background="#ffffffff" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:visibility="gone" android:layout_width="match_parent" android:layout_height="74dp">
+                    <im.bclpbkiauv.ui.components.BackupImageView android:layout_gravity="center_vertical" android:id="@+id/biv_receiver_avatar" android:layout_width="48dp" android:layout_height="48dp" android:src="@mipmap/ic_logo"/>
+                    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="56dp">
+                        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                            <TextView android:id="@+id/tv_rpk_name" android:layout_width="0dp" android:layout_height="wrap_content" android:text="xixi" android:layout_weight="1"/>
+                            <TextView android:textSize="@dimen/sp_16" android:layout_gravity="right" android:id="@+id/tv_rpk_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20GC"/>
+                            <ImageView android:layout_width="@dimen/dp_15" android:layout_height="@dimen/dp_15" android:layout_marginLeft="@dimen/dp_2" android:layout_marginTop="@dimen/dp_3" android:src="@mipmap/ic_logo"/>
+                        </LinearLayout>
+                        <TextView android:id="@+id/tv_rpk_receive_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="11月26日 19:28"/>
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="#ff999999" android:gravity="center" android:layout_gravity="bottom" android:id="@+id/tv_rpk_back_desc" android:paddingLeft="@dimen/dp_16" android:paddingRight="@dimen/dp_16" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_48" android:text="24小时内未被领取，红包将退回"/>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</im.bclpbkiauv.ui.hviews.sliding.SlidingLayout>

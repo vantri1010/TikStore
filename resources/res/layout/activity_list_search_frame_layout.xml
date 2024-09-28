@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<im.bclpbkiauv.ui.hviews.sliding.SlidingLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <im.bclpbkiauv.ui.hviews.search.MrySearchView android:id="@+id/searchview" android:visibility="gone" android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginLeft="@dimen/dp_10" android:layout_marginTop="@dimen/dp_10" android:layout_marginRight="@dimen/dp_10"/>
+    <im.bclpbkiauv.ui.components.EmptyTextProgressView android:id="@+id/emptyTextProgress" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="55dp"/>
+    <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/listview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_10"/>
+</im.bclpbkiauv.ui.hviews.sliding.SlidingLayout>

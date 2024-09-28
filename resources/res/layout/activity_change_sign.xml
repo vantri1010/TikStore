@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rl_signature_container" android:padding="10dp" android:layout_width="match_parent" android:layout_height="148dp" android:layout_margin="10dp">
+        <im.bclpbkiauv.ui.hviews.MryEditText android:textSize="16sp" android:id="@+id/et_signature" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="@string/EmptySignTips" android:maxLength="30" app:hintKey="EmptySignTips"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="13sp" android:textColor="@color/color_text_999999" android:id="@+id/tv_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0/30字" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <im.bclpbkiauv.ui.hviews.MryRoundButton android:enabled="false" android:textSize="15sp" android:id="@+id/btn_submit" android:layout_width="match_parent" android:layout_height="45dp" android:layout_margin="35dp" android:text="@string/Submit" app:textKey="Submit"/>
+</LinearLayout>

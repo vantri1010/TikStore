@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="55dp">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0">
+        <ImageView android:id="@+id/ivLeftIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/fc_icon_location_default"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:ellipsize="end" android:id="@+id/tvTitleLeft" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginRight="5dp" android:minWidth="78dp" android:text="谁可以看" android:maxLines="2" android:layout_weight="1" android:lineSpacingExtra="5dp"/>
+        <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/mentionUserRv" android:visibility="gone" android:scrollbars="none" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_weight="1" android:overScrollMode="never"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:ellipsize="end" android:gravity="end" android:id="@+id/tvTitleRight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:singleLine="true"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:src="@drawable/fc_icon_publish_arrow"/>
+    </LinearLayout>
+    <im.bclpbkiauv.ui.cells.DividerCell android:id="@+id/topDivider" android:layout_width="match_parent" android:layout_height="1px"/>
+    <im.bclpbkiauv.ui.cells.DividerCell android:layout_gravity="bottom" android:id="@+id/bottomDivider" android:layout_width="match_parent" android:layout_height="1px"/>
+</FrameLayout>

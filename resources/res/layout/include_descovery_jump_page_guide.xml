@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/containerGuideRoot" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/containerPlayGameGuide" android:background="#90000000" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <View android:id="@+id/gamePlayPlaceHolder" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="106dp" android:layout_height="32dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:layout_alignParentEnd="true"/>
+        <RelativeLayout android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_toLeftOf="@+id/gamePlayPlaceHolder" android:layout_below="@+id/gamePlayPlaceHolder">
+            <ImageView android:id="@+id/ivPlayGameGuideArrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_discovery_jump_page_guide_arrow" android:layout_alignParentEnd="true"/>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginRight="15dp" android:layout_below="@+id/ivPlayGameGuideArrow" android:layout_alignRight="@+id/ivPlayGameGuideArrow">
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textColor="#ffffff" android:gravity="center" android:layout_gravity="end" android:id="@+id/tvPlayGameGuide" android:layout_width="wrap_content" android:layout_height="wrap_content" app:textKey="LongPressedToMoveTips"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textColor="#ffffff" android:gravity="center" android:id="@+id/btnPlayGameGuideKnown" android:background="@mipmap/ic_discovery_jump_page_guide_konwn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18dp" app:textKey="IKnown"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

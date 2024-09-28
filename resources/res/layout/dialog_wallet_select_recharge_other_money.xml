@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingBottom="50dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <FrameLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-7dp" android:minHeight="55dp">
+        <im.bclpbkiauv.ui.hviews.MryAlphaImageView android:layout_gravity="center_vertical" android:id="@+id/ivBack" android:background="@color/transparent" android:padding="12dp" android:layout_width="48dp" android:layout_height="48dp" android:src="@drawable/ic_close_white" android:tint="#999999" android:tintMode="src_in"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:layout_gravity="center" android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="48dp" android:layout_marginRight="48dp" app:render="true"/>
+    </FrameLayout>
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:layout_gravity="center" android:id="@+id/tvSubTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="48dp" android:layout_marginRight="48dp" app:render="true" app:textKey="YouCanChooseTheFollowingAmount"/>
+    <im.bclpbkiauv.ui.cells.DividerCell android:layout_width="match_parent" android:layout_height="0.1dp" android:layout_marginTop="10dp"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/rv" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="350dp" android:overScrollMode="never"/>
+            <im.bclpbkiauv.ui.hviews.MryRoundButton android:textSize="15sp" android:id="@+id/btn" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginLeft="80dp" android:layout_marginTop="50dp" android:layout_marginRight="80dp" android:layout_marginBottom="30dp" app:mryIsRadiusAdjustBounds="true" app:render="true" app:textKey="RechargeImmediate"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

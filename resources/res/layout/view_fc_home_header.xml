@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:paddingTop="@dimen/dp_10" android:paddingBottom="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="@dimen/dp_60" android:paddingStart="@dimen/dp_20" android:paddingEnd="@dimen/dp_20">
+    <im.bclpbkiauv.ui.components.BackupImageView android:id="@+id/iv_user_avatar" android:background="@drawable/shape_bg_item_fc_detail_user_avatar" android:layout_width="@dimen/dp_40" android:layout_height="@dimen/dp_40" android:scaleType="centerCrop"/>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_fc_item_arrow" android:layout_centerVertical="true" android:layout_alignParentEnd="true"/>
+    <TextView android:textSize="@dimen/sp_16" android:textColor="@color/black" android:gravity="start" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的朋友圈" android:layout_centerVertical="true" android:layout_marginStart="@dimen/dp_7" android:layout_toEndOf="@+id/iv_user_avatar"/>
+</RelativeLayout>

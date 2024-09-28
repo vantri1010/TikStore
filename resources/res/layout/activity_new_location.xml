@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <RelativeLayout android:id="@+id/rl_map_container" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.baidu.mapapi.map.MapView android:id="@+id/map_view" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ImageView android:id="@+id/iv_center_marker" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/map_pin2"/>
+            </FrameLayout>
+            <ImageView android:id="@+id/iv_location" android:padding="8dp" android:layout_width="50dp" android:layout_height="50dp" android:layout_margin="20dp" android:src="@mipmap/ic_location" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:elevation="5dp"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rl_top_btn" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp">
+            <TextView android:textSize="15sp" android:textColor="@color/white" android:id="@+id/tv_cancel" android:paddingLeft="10dp" android:paddingTop="3dp" android:paddingRight="10dp" android:paddingBottom="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/Cancel"/>
+            <TextView android:textSize="15sp" android:textColor="@color/white" android:id="@+id/tv_send" android:paddingLeft="10dp" android:paddingTop="3dp" android:paddingRight="10dp" android:paddingBottom="3dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="@string/Send" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:orientation="vertical" android:id="@+id/rl_bottom_sheet" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:elevation="3dp" app:behavior_peekHeight="0dp" app:layout_behavior="@string/bottom_sheet_behavior">
+            <im.bclpbkiauv.ui.hviews.search.MrySearchView android:id="@+id/search_view" android:layout_width="match_parent" android:layout_height="46dp"/>
+            <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/search_view">
+                <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/rv_location_info" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                <RelativeLayout android:id="@+id/rl_progress" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+                </RelativeLayout>
+            </FrameLayout>
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <FrameLayout android:id="@+id/fl_bottom_menu" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_navigate_info" android:padding="10dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_centerVertical="true">
+                <TextView android:textSize="16sp" android:textColor="@color/black" android:id="@+id/tv_loc_name" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <TextView android:textSize="14sp" android:textColor="@color/color_text_gray_888888" android:id="@+id/tv_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/iv_navigate" android:layout_width="45dp" android:layout_height="45dp" android:layout_marginLeft="10dp" android:src="@mipmap/ic_navigate"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

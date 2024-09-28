@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rl_birthday_container" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="55dp" android:layout_margin="10dp">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="#333333" android:id="@+id/tv_birthday_prefix" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Birthday" android:layout_centerVertical="true" app:render="true"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tv_birthday" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textColor="@color/color_text_999999" android:id="@+id/tv_birthday_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:text="@string/BirthdayTips"/>
+</LinearLayout>

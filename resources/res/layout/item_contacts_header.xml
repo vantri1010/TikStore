@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="105dp">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_new_friend" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/iv_new_friend_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_new_friend"/>
+            <ImageView android:id="@+id/iv_unread" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_unread" android:layout_alignRight="@+id/iv_new_friend_icon"/>
+        </RelativeLayout>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="@dimen/dp_12" android:textColor="#333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" app:render="true" app:textKey="NewFriends"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_my_grouping" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_my_grouping"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:textColor="#333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" app:render="true" app:textKey="MyGrouping"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_my_group" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_my_group"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="@dimen/dp_12" android:textColor="#333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" app:render="true" app:textKey="MyGroup"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_my_channel" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_my_channel"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="@dimen/dp_12" android:textColor="#333333" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" app:render="true" app:textKey="MyChannel"/>
+    </LinearLayout>
+</LinearLayout>

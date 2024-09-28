@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:paddingTop="@dimen/dp_10" android:paddingBottom="@dimen/dp_10" android:layout_width="match_parent" android:layout_height="70dp">
+    <TextView android:gravity="center_vertical" android:id="@+id/tvRecvStatus" android:paddingLeft="@dimen/dp_15" android:layout_width="match_parent" android:layout_height="match_parent" android:text="已领取 7/9个" android:layout_weight="1"/>
+    <View android:background="@color/divider" android:layout_width="match_parent" android:layout_height="0.25dp"/>
+    <View android:layout_gravity="bottom" android:background="@color/divider" android:layout_width="match_parent" android:layout_height="0.25dp"/>
+</FrameLayout>

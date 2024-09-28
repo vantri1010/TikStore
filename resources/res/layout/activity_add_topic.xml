@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent">
+    <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/listView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/content_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="60dp">
+        <im.bclpbkiauv.ui.cells.DividerCell android:layout_width="match_parent" android:layout_height="1px"/>
+        <com.tablayout.SlidingTabLayout android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/tabLayout" android:layout_width="match_parent" android:layout_height="55dp" app:tl_divider_color="@android:color/transparent" app:tl_indicator_color="#ffb6eafc" app:tl_indicator_corner_radius="2dp" app:tl_indicator_end_color="#ff36c4fd" app:tl_indicator_height="6dp" app:tl_indicator_margin_bottom="@dimen/dp_5" app:tl_indicator_margin_top="4dp" app:tl_indicator_width="17dp" app:tl_tab_padding="14dp" app:tl_textBold="1" app:tl_textNormalSize="16sp" app:tl_textSelectColor="#ff000000" app:tl_textSelectSize="18sp" app:tl_textUnSelectColor="#ff666666"/>
+        <androidx.viewpager.widget.ViewPager android:id="@+id/vp_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+    <FrameLayout android:id="@+id/fl_search_container" android:background="#fafafa" android:layout_width="match_parent" android:layout_height="60dp">
+        <im.bclpbkiauv.ui.hviews.search.MrySearchView android:id="@+id/searchview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="@dimen/dp_15" android:layout_marginTop="12dp" android:layout_marginRight="@dimen/dp_15" android:layout_marginBottom="13dp"/>
+    </FrameLayout>
+    <FrameLayout android:id="@+id/fl_search_cover" android:background="#99000000" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="55dp"/>
+</FrameLayout>

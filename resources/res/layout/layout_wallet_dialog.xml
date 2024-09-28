@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:paddingLeft="55dp" android:paddingRight="55dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_text_black_000000" android:gravity="center" android:id="@+id/tv_title" android:layout_width="match_parent" android:layout_height="20dp" app:render="true"/>
+        <FrameLayout android:id="@+id/fl_container" android:paddingLeft="18dp" android:paddingRight="18dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <View android:id="@+id/divider" android:background="@color/color_default_split_line_C9C9C9" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_bottom_btn" android:layout_width="match_parent" android:layout_height="42dp" android:divider="@drawable/shape_linearlayout_horizontal_divider" android:showDividers="middle">
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_wallet_text_gray_B1B1B1" android:gravity="center" android:id="@+id/tv_cancel" android:visibility="gone" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_wallet_text_blue_FF2189F5" android:gravity="center" android:id="@+id/tv_confirm" android:visibility="gone" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

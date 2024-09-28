@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/fl_container" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/rv_bank_card" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never"/>
+    </FrameLayout>
+    <im.bclpbkiauv.ui.hviews.MryRoundButton android:enabled="true" android:layout_gravity="center_horizontal" android:id="@+id/btn_confirm" android:layout_width="214dp" android:layout_height="45dp" android:layout_marginTop="30dp" android:layout_marginBottom="60dp" android:text="@string/AddBankCardTitle" android:elevation="1dp" app:mryIsRadiusAdjustBounds="true"/>
+</LinearLayout>

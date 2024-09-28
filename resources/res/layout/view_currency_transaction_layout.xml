@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/llCurrencyContainer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="40dp">
+    <LinearLayout android:orientation="vertical" android:id="@+id/llCurrencyInfo1" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/rlCurrencyRow1" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRow1Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:gravity="right" android:id="@+id/tvRow1Info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="115dp" android:layout_marginTop="18dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlCurrencyRow2" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRow2Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:gravity="right" android:id="@+id/tvRow2Info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="115dp" android:layout_marginTop="18dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlCurrencyRow3" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRow3Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:id="@+id/tvRow3Info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="115dp" android:layout_marginTop="18dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlCurrencyRow4" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRow4Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:gravity="right" android:id="@+id/tvRow4Info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="115dp" android:layout_marginTop="18dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlCurrencyRow5" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRow5Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:gravity="right" android:id="@+id/tvRow5Info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="115dp" android:layout_marginTop="18dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlCurrencyRow6" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRow6Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@+id/tvRow6Info" android:layout_width="132dp" android:layout_height="wrap_content" android:layout_marginLeft="100dp" android:layout_marginTop="20dp" android:layout_marginRight="15dp" android:maxLines="1" android:layout_toStartOf="@+id/ivRow6Copy"/>
+            <im.bclpbkiauv.ui.hviews.MryImageView android:id="@+id/ivRow6Copy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:layout_marginRight="21dp" android:src="@mipmap/icon_paybill_copy" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlCurrencyRow7" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRow7Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:id="@+id/tvRow7Info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="115dp" android:layout_marginTop="18dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlCurrencyRow8" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRow8Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:id="@+id/tvRow8Info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="115dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlCurrencyRow9" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRow9Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:gravity="right" android:id="@+id/tvRow9Info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="115dp" android:layout_marginTop="18dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlCurrencyRow10" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRow10Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:gravity="right" android:id="@+id/tvRow10Info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="115dp" android:layout_marginTop="18dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/rlCurrencyRow11" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRow11Name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="18dp" android:layout_marginTop="18dp"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="17sp" android:textColor="@color/color_333333" android:gravity="right" android:id="@+id/tvRow11Info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="100dp" android:layout_marginTop="18dp" android:layout_marginRight="18dp" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

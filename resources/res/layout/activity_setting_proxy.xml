@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#fafafa" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rl_proxy" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="@dimen/activity_setting_notice_row_height" android:layout_marginTop="43dp">
+        <TextView android:textSize="14sp" android:textColor="#ff222222" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_setting_notice_row_margin_left" android:text="@string/UseProxySettings" android:layout_centerVertical="true"/>
+        <TextView android:background="#c9c9c9" android:layout_width="match_parent" android:layout_height="@dimen/activity_setting_notice_row_div_height" android:layout_alignParentBottom="true"/>
+        <TextView android:background="#c9c9c9" android:layout_width="match_parent" android:layout_height="@dimen/activity_setting_notice_row_div_height" android:layout_alignParentTop="true"/>
+        <Switch android:id="@+id/switch_proxy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="17dp" android:checked="false" android:thumb="@drawable/switch_thumb2" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:switchTextAppearance="@style/My.TextAppearance" android:track="@drawable/switch_track1" android:switchMinWidth="20dp"/>
+    </RelativeLayout>
+    <TextView android:textSize="12sp" android:textColor="#ff8b8d99" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/activity_setting_notice_row_margin_left" android:layout_marginTop="37dp" android:text="已存代理列表"/>
+    <RelativeLayout android:id="@+id/rl_add_proxy" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="@dimen/activity_setting_notice_row_height" android:layout_marginTop="8dp">
+        <TextView android:textSize="14sp" android:textColor="#268cff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="@string/AddProxy" android:layout_toRightOf="@+id/iv_add" android:layout_centerVertical="true"/>
+        <TextView android:background="#c9c9c9" android:layout_width="match_parent" android:layout_height="@dimen/activity_setting_notice_row_div_height" android:layout_alignParentBottom="true"/>
+        <TextView android:background="#c9c9c9" android:layout_width="match_parent" android:layout_height="@dimen/activity_setting_notice_row_div_height" android:layout_alignParentTop="true"/>
+        <ImageView android:id="@+id/iv_add" android:layout_width="15dp" android:layout_height="15dp" android:layout_marginLeft="@dimen/activity_setting_notice_row_margin_left" android:src="@mipmap/icon_add" android:tint="#268cff" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <FrameLayout android:id="@+id/fl_container" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

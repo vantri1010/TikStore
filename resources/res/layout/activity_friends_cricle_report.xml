@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/lin_reportips" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <im.bclpbkiauv.ui.components.ColorTextView android:textSize="16sp" android:textColor="#ffb7b7b7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="18dp" android:layout_marginBottom="18dp" android:text="@string/friendscircle_choose_report_reason" app:stringkey="friendscircle_choose_report_reason"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/lin_report1" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <im.bclpbkiauv.ui.components.ColorTextView android:textSize="16sp" android:textColor="#ff222222" android:id="@+id/txt_report1" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="18dp" android:layout_marginBottom="18dp" android:text="@string/friendscircle_report_type_sq" android:layout_weight="1" app:stringkey="friendscircle_report_type_sq"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/img_report1" android:background="@drawable/fc_report_v1" android:visibility="gone" android:layout_width="15dp" android:layout_height="10.5dp" android:layout_marginRight="15dp"/>
+        </LinearLayout>
+        <View android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="1px"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/lin_report2" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <im.bclpbkiauv.ui.components.ColorTextView android:textSize="16sp" android:textColor="#ff222222" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="18dp" android:layout_marginBottom="18dp" android:text="@string/firendscircle_report_type_zz" android:layout_weight="1" app:stringkey="firendscircle_report_type_zz"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/img_report2" android:background="@drawable/fc_report_v1" android:visibility="gone" android:layout_width="15dp" android:layout_height="10.5dp" android:layout_marginRight="15dp"/>
+        </LinearLayout>
+        <View android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="1px"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/lin_report3" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <im.bclpbkiauv.ui.components.ColorTextView android:textSize="16sp" android:textColor="#ff222222" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="18dp" android:layout_marginBottom="18dp" android:text="@string/firendscircle_report_type_wf" android:layout_weight="1" app:stringkey="firendscircle_report_type_wf"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/img_report3" android:background="@drawable/fc_report_v1" android:visibility="gone" android:layout_width="15dp" android:layout_height="10.5dp" android:layout_marginRight="15dp"/>
+        </LinearLayout>
+        <View android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="1px"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/lin_report4" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <im.bclpbkiauv.ui.components.ColorTextView android:textSize="16sp" android:textColor="#ff222222" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginTop="18dp" android:layout_marginBottom="18dp" android:text="@string/data_and_store_setting_other" android:layout_weight="1" app:stringkey="data_and_store_setting_other"/>
+            <ImageView android:layout_gravity="center_vertical" android:id="@+id/img_report4" android:background="@drawable/fc_report_v1" android:visibility="gone" android:layout_width="15dp" android:layout_height="10.5dp" android:layout_marginRight="15dp"/>
+        </LinearLayout>
+        <View android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="1px"/>
+        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="17sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/submit" android:background="@drawable/bg_blue_bt" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginLeft="90dp" android:layout_marginTop="80dp" android:layout_marginRight="90dp" android:text="@string/Set" app:stringkey="Set"/>
+    </LinearLayout>
+</FrameLayout>

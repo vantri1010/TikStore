@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_gravity="center" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:id="@+id/root_view" android:background="@color/black" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:id="@+id/ll_title_bar" android:visibility="gone" android:layout_width="match_parent" android:layout_height="50dp">
+        <LinearLayout android:layout_gravity="center_vertical" android:id="@+id/ll_return" android:layout_width="35dp" android:layout_height="35dp">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="10dp" android:layout_height="20dp" android:layout_marginLeft="@dimen/dp_15" android:src="@drawable/slidearrow"/>
+        </LinearLayout>
+        <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_gravity="center_vertical" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_20"/>
+        <RelativeLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView android:id="@+id/iv_fullscreen" android:visibility="gone" android:layout_width="18dp" android:layout_height="18dp" android:layout_marginRight="15dp" android:src="@mipmap/game_icon_full_screen" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/ll_state_bar" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="75dp" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/dp_10">
+            <ImageView android:id="@+id/iv_mute" android:layout_width="17dp" android:layout_height="16dp" android:layout_marginLeft="23dp" android:src="@mipmap/ic_game_share_unmute"/>
+            <RelativeLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <SeekBar android:id="@+id/fl_seekbar" android:background="@null" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="12dp" android:maxHeight="@dimen/vp_seek_height" android:max="100" android:progressDrawable="@drawable/vp_bottom_controller_seek_progress_drawable" android:minHeight="@dimen/vp_seek_height" android:thumb="@drawable/vp_bottom_controller_seek_thumb"/>
+                <TextView android:textSize="10sp" android:textColor="@color/white" android:id="@+id/tv_current_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="24dp" android:text="123" android:layout_below="@+id/fl_seekbar"/>
+                <TextView android:textSize="10sp" android:textColor="@color/white" android:id="@+id/tv_total_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="28dp" android:text="123" android:layout_below="@+id/fl_seekbar" android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <ImageView android:id="@+id/colse_fullscreen" android:layout_width="14dp" android:layout_height="15dp" android:layout_marginRight="22dp" android:src="@mipmap/iv_pc_full_scree_exit"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@+id/iv_play" android:visibility="visible" android:layout_width="50dp" android:layout_height="50dp" android:src="@mipmap/iv_pc_agent_description_video_btn_play" android:layout_centerInParent="true"/>
+</RelativeLayout>

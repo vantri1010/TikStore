@@ -1,0 +1,104 @@
+package im.bclpbkiauv.ui.components.paint;
+
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import im.bclpbkiauv.messenger.ApplicationLoader;
+import im.bclpbkiauv.messenger.R;
+
+public interface Brush {
+    float getAlpha();
+
+    float getAngle();
+
+    float getScale();
+
+    float getSpacing();
+
+    Bitmap getStamp();
+
+    boolean isLightSaber();
+
+    public static class Radial implements Brush {
+        public float getSpacing() {
+            return 0.15f;
+        }
+
+        public float getAlpha() {
+            return 0.85f;
+        }
+
+        public float getAngle() {
+            return 0.0f;
+        }
+
+        public float getScale() {
+            return 1.0f;
+        }
+
+        public boolean isLightSaber() {
+            return false;
+        }
+
+        public Bitmap getStamp() {
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inScaled = false;
+            return BitmapFactory.decodeResource(ApplicationLoader.applicationContext.getResources(), R.drawable.paint_radial_brush, options);
+        }
+    }
+
+    public static class Elliptical implements Brush {
+        public float getSpacing() {
+            return 0.04f;
+        }
+
+        public float getAlpha() {
+            return 0.3f;
+        }
+
+        public float getAngle() {
+            return (float) Math.toRadians(125.0d);
+        }
+
+        public float getScale() {
+            return 1.5f;
+        }
+
+        public boolean isLightSaber() {
+            return false;
+        }
+
+        public Bitmap getStamp() {
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inScaled = false;
+            return BitmapFactory.decodeResource(ApplicationLoader.applicationContext.getResources(), R.drawable.paint_elliptical_brush, options);
+        }
+    }
+
+    public static class Neon implements Brush {
+        public float getSpacing() {
+            return 0.07f;
+        }
+
+        public float getAlpha() {
+            return 0.7f;
+        }
+
+        public float getAngle() {
+            return 0.0f;
+        }
+
+        public float getScale() {
+            return 1.45f;
+        }
+
+        public boolean isLightSaber() {
+            return true;
+        }
+
+        public Bitmap getStamp() {
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inScaled = false;
+            return BitmapFactory.decodeResource(ApplicationLoader.applicationContext.getResources(), R.drawable.paint_neon_brush, options);
+        }
+    }
+}

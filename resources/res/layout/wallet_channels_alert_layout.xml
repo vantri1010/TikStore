@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:maxWidth="420dp">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/dp_40">
+        <ImageView android:id="@+id/iv_back" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="20dp" android:src="@mipmap/ic_close_x" android:layout_centerVertical="true" app:tint="@color/text_primary_color"/>
+        <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/color_text_black_000000" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Choose Bankcard" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="324dp">
+        <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/listView" android:layout_width="match_parent" android:layout_height="324dp" android:layout_marginTop="4dp" android:paddingStart="@dimen/dp_4" android:paddingEnd="@dimen/dp_4"/>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/emptyLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/img_empty_default"/>
+            <im.bclpbkiauv.ui.components.AppTextView android:textColor="@color/text_descriptive_color" android:layout_width="wrap_content" android:layout_height="wrap_content" app:textKey="NoBanCardBind"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

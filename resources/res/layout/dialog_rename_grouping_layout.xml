@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/ll_not_support_emoji_tips" android:background="@color/white" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginLeft="6dp" android:layout_marginRight="6dp" android:layout_centerHorizontal="true" android:elevation="3dp">
+        <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@mipmap/ic_not_support_emoji"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.5dp" android:text="@string/NotSupportEmojiTips" app:render="true" app:textKey="NotSupportEmojiTips"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@+id/ll_container" android:background="@color/white" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="65dp" android:layout_marginRight="65dp" android:layout_centerInParent="true">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/Rename" app:render="true"/>
+        <im.bclpbkiauv.ui.hviews.MryEditText android:textSize="15sp" android:gravity="center_vertical" android:id="@+id/et_grouping_name" android:background="@null" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="30dp" android:layout_marginTop="22dp" android:layout_marginRight="30dp" android:hint="@string/EmptyGroupingNameTips" android:maxLines="1" android:singleLine="true" app:hintKey="EmptyGroupingNameTips" app:render="true"/>
+        <View android:background="#ffceced2" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="30dp" android:layout_marginRight="30dp"/>
+        <View android:background="#ffceced2" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="18dp"/>
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="#ff999999" android:gravity="center" android:id="@+id/tv_not_save" android:layout_width="0dp" android:layout_height="40dp" android:text="@string/NotSave" android:layout_weight="1"/>
+            <View android:background="#ffceced2" android:layout_width="1px" android:layout_height="match_parent"/>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="#ff3bbcff" android:gravity="center" android:id="@+id/tv_save" android:layout_width="0dp" android:layout_height="40dp" android:text="@string/Save" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

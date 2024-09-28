@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_near_person_filter_text_bg" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="11dp" android:layout_marginRight="11dp" android:layout_marginBottom="10dp">
+        <TextView android:textSize="18sp" android:textColor="#222222" android:gravity="center" android:id="@+id/tv_view_women" android:layout_width="match_parent" android:layout_height="@dimen/dialog_near_person_filter_row_height" android:text="只看女生"/>
+        <TextView android:textSize="18sp" android:gravity="center" android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <TextView android:textSize="18sp" android:textColor="#222222" android:gravity="center" android:id="@+id/tv_view_man" android:layout_width="match_parent" android:layout_height="@dimen/dialog_near_person_filter_row_height" android:text="只看男生"/>
+        <TextView android:textSize="18sp" android:gravity="center" android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <TextView android:textSize="18sp" android:textColor="#222222" android:gravity="center" android:id="@+id/tv_view_all" android:layout_width="match_parent" android:layout_height="@dimen/dialog_near_person_filter_row_height" android:text="查看全部"/>
+        <TextView android:textSize="18sp" android:gravity="center" android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="@dimen/dialog_near_person_filter_row_height">
+            <TextView android:textSize="18sp" android:textColor="#222222" android:gravity="center" android:id="@+id/tv_say_hello" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="附近打招呼的人" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+            <TextView android:textSize="12sp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/tv_say_hello_num" android:background="@drawable/my_notice_pop" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginLeft="-5dp" android:layout_marginTop="-10dp" android:text="2" android:layout_toRightOf="@+id/tv_say_hello" android:layout_alignTop="@+id/tv_say_hello"/>
+        </RelativeLayout>
+        <TextView android:textSize="18sp" android:gravity="center" android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <TextView android:textSize="18sp" android:textColor="#222222" android:gravity="center" android:id="@+id/tv_clear_and_exit" android:layout_width="match_parent" android:layout_height="@dimen/dialog_near_person_filter_row_height" android:text="清除位置信息并退出"/>
+    </LinearLayout>
+    <TextView android:textSize="18sp" android:textColor="#222222" android:gravity="center" android:id="@+id/tv_cancel" android:background="@drawable/dialog_near_person_filter_text_bg" android:layout_width="match_parent" android:layout_height="@dimen/dialog_near_person_filter_row_height" android:layout_marginLeft="11dp" android:layout_marginRight="11dp" android:layout_marginBottom="30dp" android:text="@string/Cancel"/>
+</LinearLayout>

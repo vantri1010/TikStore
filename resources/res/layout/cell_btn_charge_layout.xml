@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <im.bclpbkiauv.ui.hviews.MryFrameLayout android:id="@+id/container" android:background="@color/window_background_gray" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:layout_margin="@dimen/dp_8">
+        <TextView android:textColor="@color/text_descriptive_color" android:ellipsize="end" android:gravity="center" android:id="@+id/tvAmount" android:layout_width="match_parent" android:layout_height="@dimen/dp_48" android:text="50CNY" android:maxLines="1" android:layout_weight="1" app:layout_constrainedWidth="true" app:layout_constraintBottom_toBottomOf="0"/>
+        <ImageView android:layout_gravity="bottom|right|center_vertical|center_horizontal|center" android:id="@+id/ivCheck" android:background="@drawable/bg_radiu9dp" android:layout_width="@dimen/dp_18" android:layout_height="@dimen/dp_18" android:src="@mipmap/ic_small_check" android:scaleType="centerInside" android:layout_marginStart="@dimen/dp_4" app:tint="@color/icon_white_color"/>
+    </im.bclpbkiauv.ui.hviews.MryFrameLayout>
+</merge>

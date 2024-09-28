@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/container" android:background="@color/window_background_white" android:layout_width="match_parent" android:layout_height="@dimen/dp_60" android:layout_marginStart="@dimen/dp_16" android:layout_marginEnd="@dimen/dp_16">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/ivAction" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_add_bank_card" android:scaleType="centerInside" android:layout_marginStart="@dimen/dp_16" app:tint="@color/text_descriptive_color"/>
+        <TextView android:textSize="@dimen/sp_14" android:textStyle="bold" android:textColor="@color/text_descriptive_color" android:id="@+id/tvAction" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/MyQRCode" android:layout_marginStart="@dimen/dp_12" android:layout_marginEnd="@dimen/dp_16"/>
+    </LinearLayout>
+</FrameLayout>

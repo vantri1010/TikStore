@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/fl_title_bar_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/rl_title_bar" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:gravity="center" android:id="@+id/rl_back" android:layout_width="35dp" android:layout_height="35dp" android:layout_marginLeft="10dp" android:layout_centerVertical="true">
+                <ImageView android:id="@+id/iv_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_back"/>
+            </RelativeLayout>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textColor="@color/white" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/GroupSharing" android:layout_centerInParent="true" app:mryTextStyle="1" app:textKey="GroupSharing"/>
+        </RelativeLayout>
+    </FrameLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <include layout="@layout/mc_share_view"/>
+            <im.bclpbkiauv.ui.hviews.MryLinearLayout android:orientation="vertical" android:id="@+id/ll_container" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="80dp" android:layout_marginRight="20dp" app:mryGeneralShadowAlpha="0.5" app:mryGeneralShadowElevation="5dp" app:mryRadius="7.5dp">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:paddingLeft="30dp" android:paddingRight="30dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="@dimen/dp_1">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="31dp">
+                        <im.bclpbkiauv.ui.components.BackupImageView android:id="@+id/bivGroupAvatar" android:layout_width="54dp" android:layout_height="54dp" android:layout_marginLeft="@dimen/dp_10" android:src="@mipmap/ic_logo"/>
+                        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="12dp">
+                            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/tvGroupNameParent" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="16sp" android:textColor="#333333" android:ellipsize="end" android:id="@+id/tvGroupName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+                                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:textColor="#999999" android:id="@+id/tvGroupNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="(285人)"/>
+                            </LinearLayout>
+                            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:textColor="@color/color_text_999999" android:id="@+id/tvGroupMembers" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="群号：lz10291"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <ImageView android:layout_gravity="center_horizontal" android:id="@+id/ivGroupQrCode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:scaleType="fitStart" android:adjustViewBounds="true"/>
+                        <ProgressBar android:id="@+id/progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:paddingLeft="23dp" android:paddingRight="23dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="31dp" android:layout_marginBottom="41dp">
+                    <im.bclpbkiauv.ui.hviews.MryTextView android:textColor="#333333" android:gravity="center" android:id="@+id/tvSave" android:background="@drawable/shape_rect_round_gray" android:layout_width="0dp" android:layout_height="47dp" android:text="@string/GroupSave" android:layout_weight="1"/>
+                    <im.bclpbkiauv.ui.hviews.MryTextView android:textColor="#ffffff" android:gravity="center" android:id="@+id/tvShareQrCode" android:background="@drawable/shape_rect_round_blue" android:layout_width="0dp" android:layout_height="47dp" android:layout_marginLeft="17dp" android:text="@string/GroupShareChat" android:layout_weight="1"/>
+                </LinearLayout>
+            </im.bclpbkiauv.ui.hviews.MryLinearLayout>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

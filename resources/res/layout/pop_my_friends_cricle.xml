@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="103dp">
+    <View android:id="@+id/view1" android:layout_width="10dp" android:layout_height="10dp" android:layout_alignParentRight="true"/>
+    <View android:id="@+id/view2" android:layout_width="10dp" android:layout_height="10dp" android:layout_alignParentLeft="true"/>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/friends_circle_pop_bg" android:layout_width="match_parent" android:layout_height="103dp" android:layout_toLeftOf="@+id/view1" android:layout_toRightOf="@+id/view2">
+        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="15sp" android:textColor="#ff222222" android:gravity="center_vertical" android:id="@+id/pop_do_public" android:paddingLeft="22dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="51dp" android:text="@string/firendscircle_set_public" android:drawableLeft="@drawable/fc_pop_eye" android:drawablePadding="10dp" app:stringkey="firendscircle_set_public"/>
+        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="15sp" android:textColor="#ff222222" android:gravity="center_vertical" android:id="@+id/pop_do_private" android:paddingLeft="22dp" android:layout_width="match_parent" android:layout_height="51dp" android:text="@string/friendscircle_set_private" android:drawableLeft="@drawable/my_fc_pop_private" android:drawablePadding="10dp" app:stringkey="friendscircle_set_private"/>
+        <View android:background="#ebebeb" android:layout_width="match_parent" android:layout_height="1dp"/>
+        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="15sp" android:textColor="#ff222222" android:gravity="center_vertical" android:id="@+id/pop_do_delete" android:paddingLeft="22dp" android:layout_width="match_parent" android:layout_height="51dp" android:text="@string/firendscircle_delete_dynamic" android:drawableLeft="@drawable/my_fc_pop_delete" android:drawablePadding="10dp" app:stringkey="firendscircle_delete_dynamic"/>
+    </LinearLayout>
+</RelativeLayout>

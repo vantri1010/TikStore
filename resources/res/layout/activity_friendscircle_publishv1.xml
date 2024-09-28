@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<im.bclpbkiauv.ui.components.ColorLinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView android:scrollbars="none" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="match_parent" android:overScrollMode="never">
+        <RelativeLayout android:orientation="vertical" android:paddingLeft="@dimen/dp_15" android:paddingRight="@dimen/dp_15" android:paddingBottom="10dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent">
+            <im.bclpbkiauv.ui.hui.friendscircle_v1.view.edittext.KeyDelEditText android:textSize="14sp" android:gravity="left" android:id="@+id/et_content" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:minHeight="100dp" android:hint="@string/friendscircle_publish_content_tip"/>
+            <RelativeLayout android:id="@+id/rl_multimedia" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/et_content">
+                <RelativeLayout android:id="@+id/rl_container" android:visibility="gone" android:layout_width="213dp" android:layout_height="300dp" android:layout_marginBottom="10dp" android:layout_alignTop="@+id/addpicturerecycleview_photo">
+                    <ImageView android:id="@+id/biv_video" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp" android:layout_marginRight="13dp" android:scaleType="centerCrop"/>
+                    <ImageView android:id="@+id/biv_video_h" android:layout_width="230dp" android:layout_height="180dp" android:layout_marginTop="10dp" android:layout_marginRight="13dp" android:scaleType="centerCrop"/>
+                    <ImageView android:layout_width="45dp" android:layout_height="45dp" android:src="@drawable/play_big" android:scaleType="fitXY" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+                    <ImageView android:id="@+id/iv_close" android:layout_width="26dp" android:layout_height="26dp" android:src="@mipmap/icon_create_group_delete" android:layout_alignParentRight="true"/>
+                </RelativeLayout>
+                <im.bclpbkiauv.ui.hui.friendscircle_v1.view.publishFriendCirclerecycleview.AddPictureRecyclerView android:id="@+id/addpicturerecycleview_photo" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:layout_marginBottom="10dp" android:horizontalSpacing="5dp" android:verticalSpacing="5dp" android:numColumns="3" app:max_count="9"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/rl_multimedia">
+                <im.bclpbkiauv.ui.hui.friendscircle_v1.view.flowLayout.TagFlowLayout android:id="@+id/tagflow_topics" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/divider" app:max_select="1" app:tag_gravity="-1"/>
+                <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/rvMenu" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never" android:nestedScrollingEnabled="false"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/constraintBottomParent" android:background="@color/color_E95654" android:layout_width="match_parent" android:layout_height="70dp" android:layout_alignParentBottom="true">
+        <ImageView android:id="@+id/ivBottmTrash" android:background="@drawable/fc_drag_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/tvBottomTrash" app:layout_constraintHorizontal_chainStyle="2" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+        <TextView android:textSize="@dimen/sp_15" android:id="@+id/tvBottomTrash" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/dp_10" android:text="" app:layout_constraintBottom_toBottomOf="@+id/ivBottmTrash" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/ivBottmTrash" app:layout_constraintTop_toTopOf="@+id/ivBottmTrash"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</im.bclpbkiauv.ui.components.ColorLinearLayout>

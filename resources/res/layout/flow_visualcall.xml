@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/fl_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <RelativeLayout android:orientation="vertical" android:id="@+id/lin_video" android:background="#000000" android:layout_width="103dp" android:layout_height="200dp"/>
+        <RelativeLayout android:id="@+id/rl_small_window" android:layout_width="45dp" android:layout_height="80dp" android:layout_alignRight="@+id/lin_video"/>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/lin_voice" android:visibility="visible" android:layout_width="64dp" android:layout_height="64dp">
+            <ImageView android:id="@+id/iv_call" android:background="@drawable/visualcall_phone" android:layout_width="27dp" android:layout_height="27dp"/>
+            <Chronometer android:textSize="11sp" android:textColor="#ffffffff" android:id="@+id/chr_timer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp"/>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

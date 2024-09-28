@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:layout_width="match_parent" android:layout_height="70dp">
+    <im.bclpbkiauv.ui.hviews.MryFrameLayout android:id="@+id/container" android:background="@color/window_background_white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="@dimen/dp_4" android:layout_marginBottom="@dimen/dp_4" android:layout_marginStart="@dimen/dp_16" android:layout_marginEnd="@dimen/dp_16" app:mryBorderColor="@color/cell_stroke_color" app:mryBorderWidth="0.5dp" app:mryRadius="@dimen/dp_12">
+        <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:id="@+id/clickView" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="@dimen/dp_16" android:paddingEnd="@dimen/dp_16">
+            <TextView android:textSize="@dimen/sp_14" android:textStyle="bold" android:textColor="@color/text_primary_color" android:id="@+id/tvName" android:layout_width="0dp" android:layout_height="wrap_content" android:text="PiPay" android:layout_marginEnd="@dimen/dp_12" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/ivSelect" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+            <ImageView android:id="@+id/ivSelect" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_selected" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/tvName" app:layout_constraintTop_toTopOf="0"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </im.bclpbkiauv.ui.hviews.MryFrameLayout>
+</merge>

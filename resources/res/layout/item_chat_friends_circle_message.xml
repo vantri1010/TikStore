@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/llContainer" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rlContainer" android:layout_width="match_parent" android:layout_height="match_parent">
+        <im.bclpbkiauv.ui.hviews.MryImageView android:id="@+id/ivRedPoint" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="32dp" android:src="@mipmap/iv_chat_fc_red_point"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/llInfoLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="83dp" android:layout_marginTop="11dp">
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="#000000" android:ellipsize="end" android:id="@+id/tvUserName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:maxEms="5"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:textColor="#bdcbd3" android:id="@+id/tvInteractiveType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6dp"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:textColor="#999999" android:ellipsize="end" android:id="@+id/tvInfo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" android:maxEms="8" android:singleLine="true"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="16sp" android:textColor="#666666" android:id="@+id/tvLike" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:drawableLeft="@mipmap/iv_chat_fc_like" android:drawablePadding="5dp"/>
+            </LinearLayout>
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="12sp" android:textColor="#c1c1c1" android:id="@+id/tvTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llBody" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="40dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <LinearLayout android:gravity="center" android:id="@+id/llFcInfo" android:paddingLeft="10dp" android:paddingTop="14dp" android:paddingRight="10dp" android:paddingBottom="14dp" android:layout_width="111dp" android:layout_height="66dp">
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="13sp" android:textColor="#999999" android:ellipsize="end" android:id="@+id/tvFcInfo" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/llAttention" android:background="@mipmap/iv_chat_fc_attention_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <im.bclpbkiauv.ui.hviews.MryImageView android:layout_gravity="center_vertical" android:background="@mipmap/iv_chat_fc_attenti" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="12sp" android:textColor="#2ba9f8" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:text="关注"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/llMutual" android:background="@mipmap/iv_chat_fc_mutual_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <im.bclpbkiauv.ui.hviews.MryImageView android:layout_gravity="center_vertical" android:background="@mipmap/iv_chat_fc_mutual" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="12sp" android:textColor="#d1d1d1" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4dp" android:text="已互关"/>
+            </LinearLayout>
+        </LinearLayout>
+        <View android:id="@+id/line" android:background="#dedede" android:layout_width="match_parent" android:layout_height="1px" android:layout_alignLeft="@+id/llInfoLayout" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</RelativeLayout>

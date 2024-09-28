@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/window_background_gray" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" app:srlDragRate="0.75" app:srlEnableLoadMore="true" app:srlEnablePureScrollMode="true">
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <include layout="@layout/activity_wallet_empty_layout"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent">
+                <com.tablayout.SlidingScaleTabLayout android:layout_gravity="center" android:id="@+id/tabLayout" android:paddingRight="10dp" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="48dp" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0" app:tl_indicator_corner_radius="3dp" app:tl_indicator_gravity="80" app:tl_indicator_height="3dp" app:tl_indicator_margin_bottom="0dp" app:tl_indicator_style="0" app:tl_indicator_width="24dp" app:tl_tabTextSelectStyle="1" app:tl_tab_marginBottom="15dp" app:tl_tab_padding="12dp" app:tl_tab_vertical_gravity="2" app:tl_textBold="1" app:tl_textSelectSize="@dimen/sp_16" app:tl_textUnSelectSize="16sp"/>
+                <im.bclpbkiauv.ui.hviews.NoScrollViewPager android:id="@+id/viewPager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

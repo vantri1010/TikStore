@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@color/white" android:layout_width="match_parent" android:layout_height="48dp">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_gravity="center_vertical" android:id="@+id/ivLeftIcon" android:background="@mipmap/fmt_contacts_icon_bg" android:layout_width="34dp" android:layout_height="34dp" android:src="@mipmap/icon_my_qr_code" android:scaleType="centerInside"/>
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <TextView android:textSize="14sp" android:textColor="@color/color_text_black_000000" android:id="@+id/tvItemTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/MyQRCode"/>
+            <TextView android:textSize="14sp" android:textColor="@color/color_text_black_000000" android:id="@+id/tvItemSubTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/MyQRCode"/>
+        </LinearLayout>
+        <TextView android:textSize="12sp" android:textColor="@color/color_text_gray_888888" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/tvItemDescText" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginLeft="20dp" android:layout_marginRight="10dp" android:text="@string/ShareToAdd" android:layout_weight="1"/>
+        <ImageView android:layout_gravity="right|center_vertical|center_horizontal|center" android:id="@+id/ivRightIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:src="@mipmap/icon_arrow_right"/>
+    </LinearLayout>
+    <View android:layout_gravity="bottom" android:id="@+id/divLine" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+</FrameLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingLeft="29dp" android:paddingRight="29dp" android:layout_width="match_parent" android:layout_height="match_parent">
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="27sp" android:textColor="@color/black" android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" app:mryTextStyle="1" app:textKey="ForgetPassword"/>
+    <include layout="@layout/include_login_phone_or_account"/>
+    <im.bclpbkiauv.ui.hviews.MryRoundButton android:enabled="false" android:textSize="15sp" android:id="@+id/btn" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="25dp" app:mryIsRadiusAdjustBounds="true" app:mryTextStyle="4" app:render="true" app:textKey="Next"/>
+</LinearLayout>

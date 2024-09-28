@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <im.bclpbkiauv.ui.hviews.MryLinearLayout android:orientation="vertical" android:id="@+id/containerContent" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="11dp" android:layout_marginRight="11dp" android:layout_marginBottom="7dp" app:mryRadius="14dp">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="16sp" android:textColor="@color/color_text_black_222222" android:gravity="center" android:id="@+id/tv_title" android:paddingTop="10dp" android:paddingBottom="10dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="42dp" android:text="title"/>
+        <im.bclpbkiauv.ui.cells.DividerCell android:id="@+id/divider" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1px"/>
+        <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/rlv_list" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never"/>
+    </im.bclpbkiauv.ui.hviews.MryLinearLayout>
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="16sp" android:textColor="#268cff" android:gravity="center" android:id="@+id/tv_cancel" android:background="@drawable/dialog_near_person_filter_text_bg" android:layout_width="match_parent" android:layout_height="52.54dp" android:layout_marginLeft="11dp" android:layout_marginRight="11dp" android:layout_marginBottom="30dp" android:text="@string/Cancel" app:mryAlphaEnable="false"/>
+</LinearLayout>

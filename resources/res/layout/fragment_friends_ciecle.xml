@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rl_tab_container" android:background="@drawable/shape_bg_fc_tab" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.tablayout.SlidingTabLayout android:id="@+id/tabLayout" android:background="#fffdfdfd" android:layout_width="wrap_content" android:layout_height="@dimen/dp_45" android:layout_centerHorizontal="true" app:tl_divider_color="@android:color/transparent" app:tl_indicator_color="#fff5dab9" app:tl_indicator_corner_radius="12dp" app:tl_indicator_end_color="#fffabb6f" app:tl_indicator_height="23dp" app:tl_indicator_margin_bottom="11dp" app:tl_indicator_margin_top="11dp" app:tl_indicator_style="2" app:tl_indicator_width="50dp" app:tl_tab_padding="16dp" app:tl_textBold="0" app:tl_textNormalSize="16sp" app:tl_textSelectColor="@color/white" app:tl_textUnSelectColor="#ff666666"/>
+        <View android:background="#ffe4e4e4" android:layout_width="match_parent" android:layout_height="1px" android:layout_below="@+id/tabLayout"/>
+    </RelativeLayout>
+    <im.bclpbkiauv.ui.hviews.NoScrollViewPager android:id="@+id/viewpager" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/rl_tab_container"/>
+    <View android:background="#ffe4e4e4" android:layout_width="match_parent" android:layout_height="1px"/>
+</RelativeLayout>

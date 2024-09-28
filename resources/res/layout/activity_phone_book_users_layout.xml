@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/searchLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.hviews.search.MrySearchView android:id="@+id/searchView" android:layout_width="match_parent" android:layout_height="35dp" android:layout_margin="10dp"/>
+    </FrameLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/listview" android:focusable="false" android:descendantFocusability="blocksDescendants" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" app:itemScrollDuration="200"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="50sp" android:id="@+id/tv_char" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:render="true"/>
+        <im.bclpbkiauv.ui.hviews.MryEmptyTextProgressView android:id="@+id/emptyView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <im.bclpbkiauv.ui.hviews.sidebar.SideBar android:id="@+id/sideBar" android:layout_width="35dp" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>

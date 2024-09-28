@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="50dp">
+    <RelativeLayout android:id="@+id/rl_receive" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="16sp" android:textColor="@color/color_red_packet_default" android:id="@+id/tv_receive" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19dp" android:layout_centerHorizontal="true" app:render="true" app:textKey="IReceivedTitle"/>
+        <View android:id="@+id/indicator_receive" android:background="#d63b52" android:layout_width="wrap_content" android:layout_height="3dp" android:layout_marginTop="6dp" android:layout_alignLeft="@+id/tv_receive" android:layout_alignRight="@+id/tv_receive" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rl_send" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="16sp" android:textColor="#000000" android:id="@+id/tv_send" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="19dp" android:layout_centerHorizontal="true" app:render="true" app:textKey="ISentTitle"/>
+        <View android:id="@+id/indicator_send" android:background="@color/color_red_packet_default" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="3dp" android:layout_marginTop="6dp" android:layout_alignLeft="@+id/tv_send" android:layout_alignRight="@+id/tv_send" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</LinearLayout>

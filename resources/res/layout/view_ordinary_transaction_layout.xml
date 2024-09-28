@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/llContainer" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="40dp">
+    <RelativeLayout android:id="@+id/rlRow1" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRowName1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:ellipsize="end" android:gravity="right" android:id="@+id/tvRowAddress1" android:layout_width="133dp" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="15dp" android:maxLines="1" android:layout_toStartOf="@+id/ivRowCopy1"/>
+        <im.bclpbkiauv.ui.hviews.MryImageView android:id="@+id/ivRowCopy1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:layout_marginRight="21dp" android:src="@mipmap/icon_paybill_copy" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rlRow2" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRowName2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@+id/tvRowAddress2" android:layout_width="133dp" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="15dp" android:maxLines="1" android:layout_toStartOf="@+id/ivRowCopy2"/>
+        <im.bclpbkiauv.ui.hviews.MryImageView android:id="@+id/ivRowCopy2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:layout_marginRight="21dp" android:src="@mipmap/icon_paybill_copy" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rlRow3" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRowName3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:ellipsize="end" android:id="@+id/tvRowAddress3" android:layout_width="133dp" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="15dp" android:maxLines="1" android:layout_toStartOf="@+id/ivRowCopy3"/>
+        <im.bclpbkiauv.ui.hviews.MryImageView android:id="@+id/ivRowCopy3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22dp" android:layout_marginRight="21dp" android:src="@mipmap/icon_paybill_copy" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rlRow4" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRowName4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:id="@+id/tvRowAddress4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rlRow5" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRowName5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:id="@+id/tvRowAddress5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rlRow6" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRowName6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:gravity="right" android:id="@+id/tvRowAddress6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rlRow7" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRowName7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:id="@+id/tvRowAddress7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/rlRow8" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_text_999999" android:id="@+id/tvRowName8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_333333" android:gravity="right" android:id="@+id/tvRowAddress8" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="100dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

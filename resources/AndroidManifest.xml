@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:versionCode="172" android:versionName="1.0.0" android:installLocation="auto" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="im.bclpbkiauv.messenger" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.network" android:required="false"/>
+    <uses-feature android:name="android.hardware.location" android:required="false"/>
+    <uses-feature android:name="android.hardware.LOCATION" android:required="false"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="im.bclpbkiauv.messenger.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <permission android:name="im.bclpbkiauv.messenger.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" android:xlargeScreens="true"/>
+    <uses-feature android:glEsVersion="20000" android:required="true"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.PORTRAIT" android:required="false"/>
+    <uses-feature android:name="android.hardware.microphone" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera2" android:required="false"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
+    <uses-permission android:name="android.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.MANAGE_OWN_CALLS"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.READ"/>
+    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE"/>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT"/>
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE"/>
+    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE"/>
+    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT"/>
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.READ_APP_BADGE"/>
+    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ"/>
+    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_ADDED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_INSTALL"/>
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <permission android:name="im.bclpbkiauv.messenger.permission.MIPUSH_RECEIVE" android:protectionLevel="signature"/>
+    <uses-permission android:name="im.bclpbkiauv.messenger.permission.MIPUSH_RECEIVE"/>
+    <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE"/>
+    <uses-permission android:name="com.heytap.mcs.permission.RECIEVE_MCS_MESSAGE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <application android:theme="@style/Theme.TMessages.Start" android:label="@string/AppName" android:icon="@mipmap/ic_launcher" android:name="im.bclpbkiauv.messenger.MultiDexApplicationLoader" android:manageSpaceActivity="im.bclpbkiauv.ui.ExternalActionActivity" android:debuggable="true" android:allowBackup="false" android:hardwareAccelerated="@bool/useHardwareAcceleration" android:largeHeap="true" android:supportsRtl="false" android:usesCleartextTraffic="true" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory">
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyA-t0jLPjUt2FxrA8VPK2EiYHcYcboIR6k"/>
+        <service android:name="im.bclpbkiauv.messenger.GcmPushListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <uses-library android:name="com.google.android.maps" android:required="false"/>
+        <meta-data android:name="firebase_analytics_collection_deactivated" android:value="true"/>
+        <meta-data android:name="google_analytics_adid_collection_enabled" android:value="false"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="false" android:exported="false"/>
+        <receiver android:name="im.bclpbkiauv.tel.IncomingCallReceiver" android:enabled="true" android:exported="true" android:process=".call">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:name="im.bclpbkiauv.tel.CallApiAbove29Dialer" android:enabled="true" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL"/>
+                <data android:scheme="tel"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <service android:name="im.bclpbkiauv.tel.CallApiAbove29ScreeningService" android:permission="android.permission.BIND_SCREENING_SERVICE" android:exported="true">
+            <intent-filter>
+                <action android:name="android.telecom.CallScreeningService"/>
+            </intent-filter>
+        </service>
+        <service android:name="im.bclpbkiauv.tel.CallApiBelow26And28Service" android:enabled="true"/>
+        <activity android:name="im.bclpbkiauv.ui.hui.WebViewAppCompatActivity" android:launchMode="singleTop" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustPan" android:hardwareAccelerated="@bool/useHardwareAcceleration"/>
+        <activity android:name="im.bclpbkiauv.ui.LaunchActivity" android:launchMode="singleTop" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:allowTaskReparenting="true" android:windowSoftInputMode="adjustPan" android:hardwareAccelerated="@bool/useHardwareAcceleration">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="video/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="image/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="vnd.android.cursor.item/vnd.im.bclpbkiauv.messenger.android.profile"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="http" android:host="m12345.cc"/>
+                <data android:scheme="https" android:host="m12345.cc"/>
+            </intent-filter>
+            <intent-filter android:icon="@mipmap/ic_launcher" android:priority="1" android:roundIcon="@mipmap/ic_launcher_round">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="hchat"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="gj6dn0"/>
+            </intent-filter>
+            <meta-data android:name="android.service.chooser.chooser_target_service" android:value=".AppChooserTargetService"/>
+        </activity>
+        <activity android:name="im.bclpbkiauv.ui.LaunchTempActivity" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustPan" android:noHistory="true" android:hardwareAccelerated="@bool/useHardwareAcceleration"/>
+        <activity android:theme="@style/Theme.TMessages.Transparent" android:name="im.bclpbkiauv.ui.ShareActivity" android:stateNotNeeded="true" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustPan" android:hardwareAccelerated="@bool/useHardwareAcceleration">
+            <intent-filter android:icon="@mipmap/ic_launcher" android:priority="1" android:roundIcon="@mipmap/ic_launcher_round">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="hchat"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="im.bclpbkiauv.ui.ExternalActionActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustPan" android:hardwareAccelerated="@bool/useHardwareAcceleration">
+            <intent-filter android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round">
+                <action android:name="im.bclpbkiauv.passport.AUTHORIZE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="im.bclpbkiauv.ui.IntroActivity" android:launchMode="singleTask" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+        <activity android:name="im.bclpbkiauv.messenger.OpenChatReceiver" android:exported="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+        <activity android:theme="@style/Theme.TMessages" android:name="im.bclpbkiauv.ui.hui.visualcall.VisualCallActivity" android:exported="true" android:launchMode="singleInstance" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="m12345.cc.av.caller"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="hchat" android:host="chat"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/VisualCallTheme" android:name="im.bclpbkiauv.ui.hui.visualcall.VisualCallReceiveActivity" android:exported="true" android:launchMode="singleInstance" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+            <intent-filter>
+                <action android:name="m12345.cc.av.receive"/>
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.TMessages.PopupNotification" android:name="im.bclpbkiauv.ui.PopupNotificationActivity" android:taskAffinity="" android:excludeFromRecents="true" android:launchMode="singleTask" android:configChanges="keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize" android:resizeableActivity="false"/>
+        <activity android:name="im.bclpbkiauv.ui.VoIPActivity" android:taskAffinity="im.bclpbkiauv.messenger.voip" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:name="im.bclpbkiauv.ui.VoIPGroupActivity" android:taskAffinity="im.bclpbkiauv.messenger.voip" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustNothing"/>
+        <activity android:theme="@style/Theme.TMessages.Transparent" android:name="im.bclpbkiauv.ui.VoIPPermissionActivity" android:taskAffinity="im.bclpbkiauv.messenger.voip" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+        <activity android:theme="@style/Theme.TMessages.TransparentWithAlerts" android:name="im.bclpbkiauv.ui.VoIPFeedbackActivity" android:taskAffinity="im.bclpbkiauv.messenger.voip_feedback" android:excludeFromRecents="true" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+        <activity android:theme="@style/Theme.TMessages.TransparentWithAlerts" android:name="im.bclpbkiauv.ui.TwoStepVerificationActivityNew" android:configChanges="keyboard|keyboardHidden|orientation|screenSize"/>
+        <receiver android:name="im.bclpbkiauv.messenger.AutoMessageHeardReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="im.bclpbkiauv.messenger.ACTION_MESSAGE_HEARD"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="im.bclpbkiauv.messenger.AutoMessageReplyReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="im.bclpbkiauv.messenger.ACTION_MESSAGE_REPLY"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="im.bclpbkiauv.messenger.AuthenticatorService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator"/>
+            </intent-filter>
+            <meta-data android:name="android.accounts.AccountAuthenticator" android:resource="@xml/auth"/>
+        </service>
+        <service android:name="im.bclpbkiauv.messenger.ContactsSyncAdapterService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/sync_contacts"/>
+            <meta-data android:name="android.provider.CONTACTS_STRUCTURE" android:resource="@xml/contacts"/>
+        </service>
+        <service android:label="@string/AppName" android:name="im.bclpbkiauv.messenger.AppChooserTargetService" android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.chooser.ChooserTargetService"/>
+            </intent-filter>
+        </service>
+        <service android:name="im.bclpbkiauv.messenger.KeepAliveJob" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="im.bclpbkiauv.messenger.BringAppForegroundService" android:enabled="true"/>
+        <service android:name="im.bclpbkiauv.messenger.NotificationsService" android:enabled="true"/>
+        <service android:name="im.bclpbkiauv.messenger.NotificationRepeat" android:exported="false"/>
+        <service android:name="im.bclpbkiauv.messenger.VideoEncodingService" android:enabled="true"/>
+        <service android:name="im.bclpbkiauv.messenger.LocationSharingService" android:enabled="true"/>
+        <service android:name="im.bclpbkiauv.messenger.voip.VoIPService" android:enabled="true"/>
+        <service android:name="im.bclpbkiauv.messenger.MusicPlayerService" android:enabled="true" android:exported="true"/>
+        <service android:name="im.bclpbkiauv.messenger.MusicBrowserService" android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+            </intent-filter>
+        </service>
+        <service android:name="im.bclpbkiauv.messenger.WearDataLayerListenerService">
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.DATA_CHANGED"/>
+                <action android:name="com.google.android.gms.wearable.MESSAGE_RECEIVED"/>
+                <action android:name="com.google.android.gms.wearable.CAPABILITY_CHANGED"/>
+                <action android:name="com.google.android.gms.wearable.CHANNEL_EVENT"/>
+                <data android:scheme="hwear" android:host="*"/>
+            </intent-filter>
+        </service>
+        <service android:name="im.bclpbkiauv.messenger.voip.AppConnectionService" android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE">
+            <intent-filter>
+                <action android:name="android.telecom.ConnectionService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"/>
+        <receiver android:name="im.bclpbkiauv.messenger.MusicPlayerReceiver">
+            <intent-filter>
+                <action android:name="im.bclpbkiauv.android.musicplayer.close"/>
+                <action android:name="im.bclpbkiauv.android.musicplayer.pause"/>
+                <action android:name="im.bclpbkiauv.android.musicplayer.next"/>
+                <action android:name="im.bclpbkiauv.android.musicplayer.play"/>
+                <action android:name="im.bclpbkiauv.android.musicplayer.previous"/>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="im.bclpbkiauv.messenger.voip.VoIPMediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="im.bclpbkiauv.messenger.AppStartReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="im.bclpbkiauv.start"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="im.bclpbkiauv.messenger.RefererReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="im.bclpbkiauv.messenger.WearReplyReceiver" android:enabled="true"/>
+        <receiver android:name="im.bclpbkiauv.messenger.StopLiveLocationReceiver" android:enabled="true"/>
+        <receiver android:name="im.bclpbkiauv.messenger.PopupReplyReceiver" android:enabled="true"/>
+        <receiver android:name="im.bclpbkiauv.messenger.NotificationCallbackReceiver" android:enabled="true" android:exported="false"/>
+        <receiver android:name="im.bclpbkiauv.messenger.ShareBroadcastReceiver" android:enabled="true"/>
+        <receiver android:name="im.bclpbkiauv.messenger.CustomTabsCopyReceiver" android:enabled="true"/>
+        <receiver android:name="im.bclpbkiauv.messenger.NotificationDismissReceiver" android:exported="false"/>
+        <receiver android:name="im.bclpbkiauv.messenger.voip.VoIPActionsReceiver" android:exported="false"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="im.bclpbkiauv.messenger.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/provider_paths"/>
+        </provider>
+        <provider android:name="im.bclpbkiauv.messenger.NotificationImageProvider" android:exported="false" android:authorities="im.bclpbkiauv.messenger.notification_image_provider" android:grantUriPermissions="true"/>
+        <provider android:name="im.bclpbkiauv.messenger.voip.CallNotificationSoundProvider" android:exported="true" android:authorities="im.bclpbkiauv.messenger.call_sound_provider"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <uses-library android:name="com.sec.android.app.multiwindow" android:required="false"/>
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true"/>
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_W" android:value="632dp"/>
+        <meta-data android:name="com.sec.android.multiwindow.DEFAULT_SIZE_H" android:value="598dp"/>
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_W" android:value="632dp"/>
+        <meta-data android:name="com.sec.android.multiwindow.MINIMUM_SIZE_H" android:value="598dp"/>
+        <meta-data android:name="com.google.android.gms.car.notification.SmallIcon" android:resource="@drawable/ic_player"/>
+        <meta-data android:name="com.google.android.gms.car.application" android:resource="@xml/automotive_app_desc"/>
+        <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="face"/>
+        <meta-data android:name="android.max_aspect" android:value="2.5"/>
+        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="oYnHR3odlaw9KUleHaQP5BrTLivxSCz1"/>
+        <service android:name="im.bclpbkiauv.ui.hui.visualcall.FlowService" android:enabled="true"/>
+        <service android:name="im.bclpbkiauv.ui.hui.visualcall.VisualCallReceiveService" android:enabled="true"/>
+        <meta-data android:name="im.bclpbkiauv.ui.hui.friendscircle.fcHelper.FlickrGlideModule" android:value="GlideModule"/>
+        <activity android:theme="@style/Theme.Translucent" android:name="im.bclpbkiauv.keepalive.OnePxActivity" android:exported="false" android:process=":keep" android:finishOnTaskLaunch="false" android:excludeFromRecents="true" android:launchMode="singleInstance" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <service android:name="im.bclpbkiauv.keepalive.ChannelService" android:enabled="true" android:exported="true" android:process=":keep"/>
+        <service android:name="im.bclpbkiauv.keepalive.DaemonService" android:enabled="true" android:exported="true" android:process=":keep"/>
+        <service android:name="im.bclpbkiauv.keepalive.ScheduleService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="true"/>
+        <receiver android:name="im.bclpbkiauv.keepalive.MonitorReceiver" android:process=":keep">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="com.silence.gray.wake"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="im.bclpbkiauv.keepalive.ScreenReceiver" android:enabled="true" android:exported="true" android:process=":keep">
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.intent.action.SCREEN_ON"/>
+                <action android:name="android.intent.action.SCREEN_OFF"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <meta-data android:name="com.openinstall.APP_KEY" android:value="gj6dn0"/>
+        <activity android:theme="@style/ActivityTranslucent" android:name="com.blankj.utilcode.util.Utils$TransActivity" android:multiprocess="true" android:configChanges="keyboardHidden|orientation|screenSize" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <provider android:name="com.blankj.utilcode.util.Utils$FileProvider4UtilCode" android:exported="false" android:multiprocess="true" android:authorities="im.bclpbkiauv.messenger.utilcode.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/util_code_provider_paths"/>
+        </provider>
+        <service android:name="com.blankj.utilcode.util.MessengerUtils$ServerService">
+            <intent-filter>
+                <action android:name="im.bclpbkiauv.messenger.messenger"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <activity android:theme="@style/PremissionTranslucentTheme" android:name="com.bjz.comm.net.premission.PermissionActivity" android:launchMode="singleTask"/>
+        <activity android:theme="@style/EasyPermissions.Transparent" android:label="" android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity" android:exported="false"/>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="im.bclpbkiauv.messenger.firebaseinitprovider" android:initOrder="100"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <receiver android:label="NetworkConnection" android:name="com.qiniu.android.dns.NetworkReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+    </application>
+</manifest>

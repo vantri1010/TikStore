@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/shape_item_bg_fc_location_info" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="match_parent" android:layout_height="60dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/color_text_black_222222" android:ellipsize="end" android:id="@+id/tv_location_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="1" app:render="true"/>
+        <TextView android:textSize="12sp" android:textColor="@color/color_text_999999" android:ellipsize="end" android:id="@+id/tv_address" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/dp_5" android:maxLines="1"/>
+    </LinearLayout>
+    <ImageView android:id="@+id/iv_selected" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:src="@mipmap/fc_icon_item_location_selected"/>
+</LinearLayout>

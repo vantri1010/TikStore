@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/layout_red_packet_tab"/>
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_select_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true">
+            <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:textColor="@color/color_red_packet_default" android:id="@+id/tv_time_text" android:layout_width="wrap_content" android:layout_height="wrap_content" app:render="true" app:textKey="TimeWithinHalfAYear"/>
+            <ImageView android:layout_width="12dp" android:layout_height="6dp" android:layout_marginLeft="5dp" android:src="@mipmap/ic_arrow_red"/>
+        </LinearLayout>
+        <im.bclpbkiauv.ui.components.BackupImageView android:id="@+id/iv_avatar" android:background="@mipmap/ic_wx_circle" android:layout_width="64dp" android:layout_height="64dp" android:layout_marginTop="34dp" android:layout_centerHorizontal="true"/>
+        <TextView android:textSize="13sp" android:id="@+id/tv_red_packet_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_below="@+id/iv_avatar" android:layout_centerHorizontal="true"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/ll_CG_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="15dp" android:layout_below="@+id/tv_red_packet_num" android:layout_centerHorizontal="true">
+            <ImageView android:layout_gravity="center_vertical" android:layout_width="@dimen/dp_30" android:layout_height="@dimen/dp_30" android:layout_marginRight="@dimen/dp_3" android:src="@mipmap/ic_red_pack"/>
+            <TextView android:textSize="30sp" android:textColor="@color/black" android:id="@+id/tv_CG_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2dp" android:text="00.00"/>
+            <TextView android:textSize="13sp" android:textColor="@color/color_text_999999" android:id="@+id/tvMoneyUnit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:text="CG"/>
+        </LinearLayout>
+        <TextView android:textSize="13sp" android:textColor="@color/color_text_999999" android:id="@+id/tv_lucky_times" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="15dp" android:layout_below="@+id/ll_CG_num" android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+    <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/rv_records" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"/>
+</LinearLayout>

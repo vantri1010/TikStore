@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout android:id="@+id/smartRefreshLayout" android:layout_width="match_parent" android:layout_height="match_parent" app:srlEnablePreviewInEditMode="false">
+        <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior" app:layout_scrollFlags="3">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/rec" android:tag="@string/key_windowBackgroundGray" android:background="#f2f2f2" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/lin_empty" android:tag="@string/key_windowBackgroundGray" android:background="#f2f2f2" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <RelativeLayout android:id="@+id/rl_allinfo" android:layout_width="match_parent" android:layout_height="226dp">
+                    <ImageView android:id="@+id/img_parallax" android:layout_width="match_parent" android:layout_height="226dp" android:layout_marginBottom="10dp" android:src="@drawable/friends_cricle_bg" android:scaleType="centerCrop" android:adjustViewBounds="true" app:layout_collapseMode="2"/>
+                    <TextView android:textSize="17sp" android:textColor="#ffffffff" android:id="@+id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="50dp" android:text=" " android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+                    <im.bclpbkiauv.ui.components.BackupImageView android:id="@+id/iv_head" android:background="@drawable/shape_item_bg_fc_my_header" android:padding="2dp" android:layout_width="70dp" android:layout_height="70dp" android:layout_above="@+id/user_name" android:layout_centerHorizontal="true"/>
+                    <im.bclpbkiauv.ui.hui.friendscircle.view.CommFCArcView android:layout_width="match_parent" android:layout_height="25dp" android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+                <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:tag="@string/key_windowBackgroundWhite" android:background="@color/white" android:paddingTop="10dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="10dp">
+                    <LinearLayout android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="13sp" android:textColor="#ff268cff" android:id="@+id/txt_empty_attention" android:background="@drawable/bg_half_blue_line" android:paddingLeft="12dp" android:paddingTop="5dp" android:paddingRight="12dp" android:paddingBottom="5dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/frienscircle_home_add_attention" android:layout_centerVertical="true" app:stringkey="frienscircle_home_add_attention"/>
+                        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="13sp" android:textColor="#ffb7b7b7" android:id="@+id/txt_empty_attentioned" android:background="@drawable/bg_half_grey_line" android:paddingLeft="12dp" android:paddingTop="5dp" android:paddingRight="12dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/friendscircle_home_attentioned" android:drawableLeft="@drawable/fc_icon_attentioned" android:layout_centerVertical="true" app:stringkey="friendscircle_home_attentioned"/>
+                    </LinearLayout>
+                    <View android:layout_gravity="center_vertical" android:background="#dedede" android:layout_width="0.5dp" android:layout_height="18dp"/>
+                    <LinearLayout android:gravity="center" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="13sp" android:textColor="#ff268cff" android:id="@+id/txt_empty_chat" android:background="@drawable/bg_half_blue_line" android:paddingLeft="12dp" android:paddingTop="5dp" android:paddingRight="12dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Chats" android:drawableLeft="@drawable/fc_icon_chat" android:layout_centerVertical="true" app:stringkey="Chats"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/ll_empty_tips" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp">
+                    <ImageView android:background="@drawable/list_empty_view" android:layout_width="167dp" android:layout_height="122dp"/>
+                    <im.bclpbkiauv.ui.components.ColorTextView android:textSize="14sp" android:textColor="#ff666666" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="43dp" android:text="@string/friendscircle_no_message" app:stringkey="friendscircle_no_message" app:textviewType="label"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+    <RelativeLayout android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="45dp" app:layout_collapseMode="1">
+            <ImageView android:textSize="16sp" android:layout_gravity="left" android:id="@+id/iv_back" android:paddingLeft="0dp" android:paddingTop="10dp" android:paddingRight="20dp" android:paddingBottom="10dp" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/back_white"/>
+            <im.bclpbkiauv.ui.components.ColorTextView android:textSize="16sp" android:textColor="#00000000" android:layout_gravity="center" android:id="@+id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="@string/FriendHub" app:stringkey="FriendHub"/>
+            <ImageView android:textSize="16sp" android:layout_gravity="right" android:id="@+id/iv_menu" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginRight="15dp" android:src="@drawable/bar_right_menu"/>
+        </androidx.appcompat.widget.Toolbar>
+    </RelativeLayout>
+</FrameLayout>

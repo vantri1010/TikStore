@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/ll_bank_card_pay" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="55dp">
+        <ImageView android:id="@+id/iv" android:layout_width="35dp" android:layout_height="35dp" android:src="@mipmap/ic_bank_card_circle"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_weight="1">
+            <TextView android:textSize="14sp" android:gravity="center" android:id="@+id/tvPayWay" android:tag="@string/Typeface_Bold" android:layout_width="wrap_content" android:layout_height="0dp" android:text="银行卡" android:layout_weight="1"/>
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="12sp" android:id="@+id/tvBankName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="工商银行"/>
+                <TextView android:textSize="10sp" android:textColor="@color/white" android:ellipsize="end" android:id="@+id/tvTag" android:paddingLeft="1dp" android:paddingTop="1dp" android:paddingRight="1dp" android:paddingBottom="1dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="可支持支付宝转到银行卡" android:singleLine="true"/>
+            </LinearLayout>
+        </LinearLayout>
+        <im.bclpbkiauv.ui.hviews.MryCheckBox android:id="@+id/cb" android:background="@drawable/check_blue_circle" android:layout_width="21dp" android:layout_height="21dp" android:checked="false" android:button="@null"/>
+    </LinearLayout>
+    <im.bclpbkiauv.ui.cells.DividerCell android:id="@+id/divider" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="@dimen/sp_13" android:textColor="@color/color_FFBEBEBE" android:gravity="center" android:padding="@dimen/dp_25" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/fc_list_no_more_data" android:layout_centerHorizontal="true"/>
+</RelativeLayout>

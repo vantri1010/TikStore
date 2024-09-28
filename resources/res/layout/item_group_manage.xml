@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="65dp">
+    <ImageView android:id="@+id/iv_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:src="@mipmap/ic_grouping_arrow" android:layout_centerVertical="true"/>
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="@color/black" android:id="@+id/tv_group_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7dp" android:layout_toRightOf="@+id/iv_arrow" android:layout_centerVertical="true" app:render="true" app:textKey="MyGoodFriends"/>
+    <ImageView android:id="@+id/icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12dp" android:src="@mipmap/ic_group_move" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="14sp" android:textColor="#8b8d99" android:id="@+id/tv_member_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="1/12" android:layout_toLeftOf="@+id/icon" android:layout_centerVertical="true"/>
+    <im.bclpbkiauv.ui.hcells.MryDividerCell android:id="@+id/divider" android:layout_width="match_parent" android:layout_height="0.5dp" android:layout_alignLeft="@+id/tv_group_name" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

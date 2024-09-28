@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/root_view" android:background="@drawable/visualcall_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/ll_big_window" android:layout_width="match_parent" android:layout_height="match_parent">
+            <org.webrtc.sdk.SophonSurfaceView android:id="@+id/sf_local_view" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_big_remote_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </LinearLayout>
+        <im.bclpbkiauv.ui.hviews.DragFrameLayout android:id="@+id/chart_video_container" android:background="@color/black" android:layout_width="103dp" android:layout_height="200dp" android:layout_marginTop="16dp" android:layout_marginRight="10dp" android:layout_alignParentRight="true">
+            <org.webrtc.sdk.SophonSurfaceView android:id="@+id/sf_small_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/ll_small_remote_view" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        </im.bclpbkiauv.ui.hviews.DragFrameLayout>
+        <TextView android:id="@+id/txt_mask" android:background="#be000000" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <RelativeLayout android:id="@+id/rel_video_user" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50dp" android:layout_marginRight="16dp" android:layout_alignParentRight="true">
+            <im.bclpbkiauv.ui.components.BackupImageView android:orientation="vertical" android:id="@+id/img_video_user_head" android:layout_width="60dp" android:layout_height="60dp" android:layout_alignParentRight="true"/>
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@+id/txt_video_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:text="李四" android:layout_toLeftOf="@+id/img_video_user_head"/>
+            <im.bclpbkiauv.ui.components.ColorTextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@+id/txt_video_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:text="    " android:layout_toLeftOf="@+id/img_video_user_head" android:layout_below="@+id/txt_video_name"/>
+        </RelativeLayout>
+        <ImageView android:id="@+id/img_visualcall" android:background="@drawable/visualcall_scale" android:visibility="visible" android:layout_width="28dp" android:layout_height="25dp" android:layout_marginLeft="28dp" android:layout_marginTop="50dp"/>
+        <RelativeLayout android:id="@+id/rel_voice_user" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="128dp" android:layout_centerHorizontal="true">
+            <im.bclpbkiauv.ui.components.BackupImageView android:orientation="vertical" android:id="@+id/img_user_head" android:layout_width="110dp" android:layout_height="110dp"/>
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@+id/txt_call_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:text=" " android:layout_below="@+id/img_user_head" android:layout_centerHorizontal="true"/>
+            <im.bclpbkiauv.ui.components.ColorTextView android:textSize="14sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@+id/txt_call_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text=" " android:layout_below="@+id/txt_call_name" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/chart_content_userlist" android:layout_width="match_parent" android:layout_height="360dp" android:layout_marginTop="16dp" android:layout_alignParentRight="true"/>
+        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="11sp" android:textColor="#ffffff" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/txt_pre_change_to_voice" android:visibility="visible" android:layout_width="82dp" android:layout_height="wrap_content" android:layout_marginRight="34dp" android:layout_marginBottom="190dp" android:text="@string/Str_visualcall_to_voice" android:drawableTop="@drawable/visualcall_pre_to_voice" android:drawablePadding="5dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" app:stringkey="Str_visualcall_to_voice"/>
+        <im.bclpbkiauv.ui.components.ColorTextView android:textSize="16sp" android:textColor="#ffffff" android:layout_gravity="center_horizontal" android:id="@+id/txt_visualcall_status" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="213dp" android:text="@string/Str_visualcalling" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" app:stringkey="Str_visualcalling"/>
+        <Chronometer android:textSize="16sp" android:textColor="#ffffffff" android:id="@+id/chr_visualcall_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="181dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+        <LinearLayout android:id="@+id/rel_visual_call_a" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="65dp" android:layout_alignParentBottom="true">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/lin_operate_a" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:id="@+id/img_operate_a" android:background="@drawable/visualcall_no_voice" android:layout_width="82dp" android:layout_height="82dp"/>
+                <im.bclpbkiauv.ui.components.ColorTextView android:textSize="12sp" android:textColor="#ffffff" android:layout_gravity="center_horizontal" android:id="@+id/txt_operate_a" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Str_visualcall_no_voice" app:stringkey="Str_visualcall_no_voice"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/lin_operate_b" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:id="@+id/img_operate_b" android:background="@drawable/visualcall_cancel_common" android:layout_width="82dp" android:layout_height="82dp"/>
+                <im.bclpbkiauv.ui.components.ColorTextView android:textSize="12sp" android:textColor="#ffffff" android:layout_gravity="center_horizontal" android:id="@+id/txt_operate_b" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Str_visualcall_cancel" app:stringkey="Str_visualcall_cancel"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/lin_operate_c" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <ImageView android:id="@+id/img_operate_c" android:background="@drawable/visualcall_hands_free" android:layout_width="82dp" android:layout_height="82dp"/>
+                <im.bclpbkiauv.ui.components.ColorTextView android:textSize="12sp" android:textColor="#ffffff" android:layout_gravity="center_horizontal" android:id="@+id/txt_operate_c" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Str_visualcall_hands_free" app:stringkey="Str_visualcall_hands_free"/>
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@+id/rel_visual_call_b" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="34dp" android:layout_marginRight="34dp" android:layout_marginBottom="65dp" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="vertical" android:id="@+id/lin_pre_refuse" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@+id/iv_pre_refuse" android:background="@drawable/visualcall_cancel_common" android:layout_width="82dp" android:layout_height="82dp"/>
+                <im.bclpbkiauv.ui.components.ColorTextView android:textSize="12sp" android:textColor="#ffffff" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Str_visualcall_refuse" app:stringkey="Str_visualcall_refuse"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/lin_pre_receive" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+                <ImageView android:id="@+id/img_pre_receive" android:background="@drawable/visualcall_receive_common" android:layout_width="82dp" android:layout_height="82dp"/>
+                <im.bclpbkiauv.ui.components.ColorTextView android:textSize="12sp" android:textColor="#ffffff" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/Str_visualcall_receive" app:stringkey="Str_visualcall_receive"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/txt_tip" android:background="@color/black" android:paddingLeft="8dp" android:paddingTop="5dp" android:paddingRight="8dp" android:paddingBottom="5dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:text="" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</FrameLayout>

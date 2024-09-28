@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <im.bclpbkiauv.ui.hviews.MryTextView android:textSize="15sp" android:textColor="#ff268cff" android:gravity="center_vertical" android:id="@+id/tv_add_group" android:paddingLeft="15dp" android:paddingRight="15dp" android:layout_width="match_parent" android:layout_height="55dp" android:layout_margin="10dp" android:text="@string/AddGrouping" android:drawableLeft="@mipmap/ic_add_round" android:drawablePadding="10dp" app:render="true" app:textKey="AddGrouping"/>
+    <FrameLayout android:id="@+id/fl_container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <im.bclpbkiauv.ui.components.RecyclerListView android:id="@+id/rcvList" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp"/>
+    </FrameLayout>
+</LinearLayout>

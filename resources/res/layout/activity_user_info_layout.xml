@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<im.bclpbkiauv.ui.hviews.sliding.SlidingLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <androidx.core.widget.NestedScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:overScrollMode="never">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <Space android:layout_width="match_parent" android:layout_height="10dp"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/llInfoLayout" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="72dp">
+                <RelativeLayout android:layout_width="48dp" android:layout_height="48dp">
+                    <im.bclpbkiauv.ui.components.BackupImageView android:id="@+id/avatarImage" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <ImageView android:id="@+id/avatarOverly" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@mipmap/ic_avatar_shadow"/>
+                    <im.bclpbkiauv.ui.components.RadialProgressView android:id="@+id/rpvAvatar" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    <ImageView android:id="@+id/iv_camera" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@mipmap/ic_avatar_camera" android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <TextView android:textSize="16sp" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/tvName" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:maxLines="1" android:singleLine="true"/>
+            </LinearLayout>
+            <TextView android:textSize="12sp" android:textColor="@color/color_text_gray_a7a7a7" android:id="@+id/tvAvatarAndNameDesc" android:paddingLeft="16dp" android:paddingTop="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="15dp" android:text="@string/NameAndAvatar"/>
+            <TextView android:textSize="14sp" android:textColor="@color/color_text_black_222222" android:textColorHint="@color/divider" android:gravity="center_vertical" android:id="@+id/tvBioText" android:paddingLeft="16dp" android:paddingTop="10dp" android:paddingRight="16dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="48dp" android:hint="@string/UserBio" android:lineSpacingExtra="5dp"/>
+            <TextView android:textSize="12sp" android:textColor="@color/color_text_gray_a7a7a7" android:id="@+id/tvBioDesc" android:paddingLeft="16dp" android:paddingTop="5dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="15dp" android:text="@string/BioText" android:lineSpacingExtra="5dp"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/llUserInfoLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@+id/llChangeNumber" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="48dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/color_text_black_222222" android:gravity="center_vertical" android:id="@+id/tvChangeNumber" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/ChangeNumber"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/color_text_gray_a7a7a7" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/tvPhoneNumber" android:paddingLeft="10dp" android:paddingRight="16dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="11111111" android:drawableRight="@mipmap/icon_arrow_right" android:drawablePadding="16dp" android:layout_weight="1"/>
+                </LinearLayout>
+                <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:layout_gravity="center_vertical" android:id="@+id/llUsername" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="48dp">
+                        <TextView android:textSize="14sp" android:textColor="@color/color_text_black_222222" android:gravity="center_vertical" android:id="@+id/tvChangeUsername" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/Username"/>
+                        <TextView android:textSize="14sp" android:textColor="@color/color_text_gray_a7a7a7" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/tvUsername" android:paddingLeft="10dp" android:paddingRight="16dp" android:layout_width="0dp" android:layout_height="match_parent" android:text="username" android:drawableRight="@mipmap/icon_arrow_right" android:drawablePadding="16dp" android:layout_weight="1"/>
+                    </LinearLayout>
+                    <im.bclpbkiauv.ui.hcells.MryDividerCell android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="16dp"/>
+                </FrameLayout>
+                <FrameLayout android:id="@+id/flQRCode" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="48dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/color_text_black_222222" android:gravity="center_vertical" android:id="@+id/tvQRCode" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/MyQRCode" android:drawableRight="@mipmap/icon_arrow_right" android:drawablePadding="16dp"/>
+                    <im.bclpbkiauv.ui.hcells.MryDividerCell android:layout_width="match_parent" android:layout_height="1px"/>
+                </FrameLayout>
+                <im.bclpbkiauv.ui.hcells.MryDividerCell android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="16dp"/>
+                <LinearLayout android:id="@+id/llChangeBirthday" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="48dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/color_text_black_222222" android:gravity="center_vertical" android:id="@+id/tvChangeBirthday" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/Birthday"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/color_text_gray_a7a7a7" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/tvBirthday" android:paddingLeft="10dp" android:paddingRight="16dp" android:layout_width="0dp" android:layout_height="match_parent" android:drawableRight="@mipmap/icon_arrow_right" android:drawablePadding="16dp" android:layout_weight="1"/>
+                </LinearLayout>
+                <im.bclpbkiauv.ui.hcells.MryDividerCell android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="16dp"/>
+                <LinearLayout android:id="@+id/llChangeGender" android:paddingLeft="16dp" android:layout_width="match_parent" android:layout_height="48dp">
+                    <TextView android:textSize="14sp" android:textColor="@color/color_text_black_222222" android:gravity="center_vertical" android:id="@+id/tvChangeGender" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/PassportGender"/>
+                    <TextView android:textSize="14sp" android:textColor="@color/color_text_gray_a7a7a7" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/tvGender" android:paddingLeft="10dp" android:paddingRight="16dp" android:layout_width="0dp" android:layout_height="match_parent" android:drawablePadding="16dp" android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:textSize="14sp" android:textColor="@color/color_text_black_222222" android:gravity="center" android:id="@+id/tvAddAccount" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="15dp" android:text="@string/AddAccount"/>
+            <TextView android:textSize="14sp" android:textColor="@color/color_text_black_222222" android:gravity="center" android:id="@+id/tvLogout" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="15dp" android:text="@string/LogOut"/>
+            <View android:layout_width="match_parent" android:layout_height="50dp"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</im.bclpbkiauv.ui.hviews.sliding.SlidingLayout>

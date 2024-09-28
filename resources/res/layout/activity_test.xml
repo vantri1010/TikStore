@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <im.bclpbkiauv.ui.cell.SettingsItem android:id="@+id/siView" android:layout_width="match_parent" android:layout_height="58dp" app:mry_item_desc_text="zzzz" app:mry_item_div_line_padding_left="@dimen/dp_48" app:mry_item_divider="true" app:mry_item_left_icon="@mipmap/ic_logo" app:mry_item_right_icon="@mipmap/icon_arrow_right" app:mry_item_sub_title="yyyyy" app:mry_item_title="xxxxx"/>
+        <TextView android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="100dp" android:text="11111111"/>
+        <im.bclpbkiauv.ui.hviews.MryTextView android:layout_width="match_parent" android:layout_height="40dp" android:text="xxxxxxxxx"/>
+    </FrameLayout>
+</LinearLayout>

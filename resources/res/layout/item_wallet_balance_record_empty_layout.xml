@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <im.bclpbkiauv.ui.components.AppTextView android:textSize="@dimen/sp_14" android:textColor="@color/text_secondary_color" android:gravity="center" android:background="@drawable/cell_bottom_bg" android:layout_width="match_parent" android:layout_height="66dp" android:layout_marginBottom="@dimen/dp_12" app:textKey="NoNewBill"/>
+</FrameLayout>
